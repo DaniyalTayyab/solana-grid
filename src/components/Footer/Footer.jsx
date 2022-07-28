@@ -3,14 +3,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 import DiscordIconLight from "../../assets/svg-icons/DiscordFooterLight";
 import DiscordIconGold from "../../assets/svg-icons/DiscordIcon";
-// import DiscordIconGold from "../../assets/svg-icons/DiscordGoldIcon";
-// import DiscordIconLight from "../../assets/svg-icons/DiscordIcon_light";
+
 import ShipIcon from "../../assets/svg-icons/ShipIcon";
 import ShipIconLight from "../../assets/svg-icons/ShipIcon_light";
 import TwitterIconGold from "../../assets/svg-icons/TwitterIcon";
 import TwitterIconLight from "../../assets/svg-icons/TwitterLightFooter";
-// import TwitterIconGold from "../../assets/svg-icons/TwitterGoldIcon";
-// import TwitterIconLight from "../../assets/svg-icons/TwitterIcon_light";
+
 import { BuyButton, CopyrightText, FooterWrapper } from "./footer.styles";
 
 export default function Footer() {
