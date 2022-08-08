@@ -19,7 +19,7 @@ function Mint() {
         open={mintingModal}
         closeModal={() => setMintingModal(false)}
       />
-      <Box style={{ height: "274px" }}>
+      <Box>
         <Header profileScreen />
       </Box>
       <GoldDivider theme={theme} />

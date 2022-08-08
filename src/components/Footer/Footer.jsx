@@ -2,11 +2,13 @@ import { Box } from "@mui/system";
 import React from "react";
 import { useSelector } from "react-redux";
 import DiscordIconLight from "../../assets/svg-icons/DiscordFooterLight";
+
 import DiscordIconGold from "../../assets/svg-icons/DiscordIcon";
 
 import ShipIcon from "../../assets/svg-icons/ShipIcon";
 import ShipIconLight from "../../assets/svg-icons/ShipIcon_light";
 import TwitterIconGold from "../../assets/svg-icons/TwitterIcon";
+
 import TwitterIconLight from "../../assets/svg-icons/TwitterLightFooter";
 
 import { BuyButton, CopyrightText, FooterWrapper } from "./footer.styles";

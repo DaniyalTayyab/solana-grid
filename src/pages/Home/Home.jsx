@@ -15,8 +15,9 @@ export default function Home() {
   const theme = useSelector((state) => state.theme.value);
   const [sidePanel, setSidePanel] = useState(false);
   const [popup, setPopup] = useState(null);
-  const toggleSideDrawer = () => {
+  const toggleSideDrawer = (type) => {
     setSidePanel(!sidePanel);
+    console.log(type);
   };
 
   const handleHover = (event) => {

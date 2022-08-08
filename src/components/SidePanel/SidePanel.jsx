@@ -1,60 +1,58 @@
-import { Box, Drawer, Typography } from '@mui/material';
-import React from 'react';
-import NFT from '../../assets/nft-image.png';
-import CloseIcon from '../../assets/svg-icons/CloseIcon';
-import GoldHeartIcon from '../../assets/svg-icons/GoldHeartIcon';
-import { GoldDivider } from '../../pages/Home/home.styles';
-import { DescriptionWrapper, MainText, SecondaryText } from './panel.styles';
+import { Box, Drawer, Typography } from "@mui/material";
+import React from "react";
+import NFT from "../../assets/nft-image.png";
+import CloseIcon from "../../assets/svg-icons/CloseIcon";
+import GoldHeartIcon from "../../assets/svg-icons/GoldHeartIcon";
+import { GoldDivider } from "../../pages/Home/home.styles";
+import { DescriptionWrapper, MainText, SecondaryText } from "./panel.styles";
 
 export default function SidePanel(props) {
   const { toggleDrawer, sidePanel, theme } = props;
   return (
-    <Drawer anchor='right' open={sidePanel} onClose={() => toggleDrawer()}>
+    <Drawer anchor="right" open={sidePanel} onClose={() => toggleDrawer()}>
       <Box
         style={{
-          width: '577px',
+          width: "577px",
           background:
-            theme === 'dark'
-              ? 'transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box'
-              : 'transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box',
-          boxShadow: '0px 3px 6px #00000029',
+            theme === "dark"
+              ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
+              : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
+          boxShadow: "0px 3px 6px #00000029",
           paddingTop: 150,
         }}
       >
-        <Box style={{ float: 'right' }} onClick={() => toggleDrawer()}>
+        <Box style={{ float: "right" }} onClick={() => toggleDrawer()}>
           <CloseIcon />
         </Box>
         <img
-          alt='not found'
+          alt="not found"
           src={NFT}
           style={{
-            width: '431px',
-            height: '505px',
-            // backgroundImage: 'url(src/assets/nft-image.png)',
+            width: "431px",
+            height: "505px",
             marginTop: 58,
             marginLeft: 54,
-            borderRadius: '20px',
+            borderRadius: "20px",
             opacity: 1,
-            marginBottom: '67px',
+            marginBottom: "67px",
           }}
         />
-        <GoldDivider height='3px' />
+        <GoldDivider height="3px" />
         <Box
           style={{
-            display: 'flex',
-            flexDirection: 'row',
+            display: "flex",
+            flexDirection: "row",
             marginLeft: 176,
             marginTop: 20,
-            alignItems: 'center',
+            alignItems: "center",
           }}
         >
           <Typography
             style={{
-              letterSpacing: '0px',
-              color: '#FFFFFF',
+              letterSpacing: "0px",
+              color: "#FFFFFF",
               opacity: 1,
-              // font: 'normal normal medium 28px/24px Poppins',
-              font: 'normal normal normal 28px/24px Poppins',
+              font: "normal normal normal 28px/24px Poppins",
               marginRight: 12,
             }}
           >
@@ -62,22 +60,22 @@ export default function SidePanel(props) {
           </Typography>
           <Typography
             style={{
-              font: 'normal normal normal 22px/24px Poppins',
-              letterSpacing: '0px',
-              color: '#FFFFFF',
+              font: "normal normal normal 22px/24px Poppins",
+              letterSpacing: "0px",
+              color: "#FFFFFF",
               opacity: 0.5,
               marginRight: 70,
             }}
           >
             012558683
           </Typography>
-          <GoldHeartIcon />{' '}
+          <GoldHeartIcon />{" "}
           <Typography
             style={{
               marginLeft: 15,
-              font: 'normal normal normal 22px/24px Poppins',
-              letterSpacing: '0px',
-              color: '#FFFFFF',
+              font: "normal normal normal 22px/24px Poppins",
+              letterSpacing: "0px",
+              color: "#FFFFFF",
               opacity: 0.5,
             }}
           >
@@ -86,8 +84,8 @@ export default function SidePanel(props) {
         </Box>
         <Box
           style={{
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
             marginLeft: 11,
             marginTop: 33,
             paddingRight: 15,

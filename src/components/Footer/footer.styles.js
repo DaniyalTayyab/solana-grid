@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
-import { Button } from '@mui/material';
+import styled from "@emotion/styled";
+import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 150px;
+  height: 120px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -13,7 +13,7 @@ export const CopyrightText = styled.span`
   text-align: left;
   font: normal normal normal 17px/32px Poppins;
   letter-spacing: 0px;
-  color: ${(props) => (props.theme === 'dark' ? '#b4951d' : '#8D65B5')};
+  color: ${(props) => (props.theme === "dark" ? "#b4951d" : "#8D65B5")};
   margin-left: 60px;
 `;
 export const BuyButton = styled(Button)`
@@ -22,13 +22,13 @@ export const BuyButton = styled(Button)`
   /* UI Properties */
   color: #303030;
   background: ${(props) =>
-    props.theme === 'dark'
-      ? 'transparent linear-gradient(106deg, #d3b651 0%, #f3df8e 55%, #c77131 100%) 0% 0% no-repeat padding-box'
-      : 'transparent linear-gradient(106deg, #3D2E87 0%, #8C2DDF 100%) 0% 0% no-repeat padding-box'};
+    props.theme === "dark"
+      ? "transparent linear-gradient(106deg, #d3b651 0%, #f3df8e 55%, #c77131 100%) 0% 0% no-repeat padding-box"
+      : "transparent linear-gradient(106deg, #3D2E87 0%, #8C2DDF 100%) 0% 0% no-repeat padding-box"};
   box-shadow: 0px 13px 34px #f0d87b1a;
   border-radius: 8px;
   text-align: left;
   font: normal normal 600 16px/24px Poppins;
   letter-spacing: 0px;
-  color: ${(props) => (props.theme === 'dark' ? '#303030' : 'white')};
+  color: ${(props) => (props.theme === "dark" ? "#303030" : "white")};
 `;
