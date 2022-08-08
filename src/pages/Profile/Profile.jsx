@@ -251,9 +251,26 @@ export default function Profile() {
                   </Box>
                 </button>
               ))}
-              <AddNFTBox onClick={() => toggleCreateNFTModal()} theme={theme}>
-                {theme === "dark" ? <AddNFTIcon /> : <AddNFTIconLight />}
-              </AddNFTBox>
+              <button
+                style={{
+                  padding: "0",
+                  margin: "0",
+                  background:
+                    theme === "dark"
+                      ? "#0A0A0A 0% 0% no-repeat padding-box"
+                      : "white",
+                  borderRadius: "10px",
+                  border: "none",
+                  boxShadow: "0 5px 10px rgb(0,0,0,0.5)",
+                  padding: "5px",
+                  // marginTop: "20px",
+                  // marginTop: "20px",
+                }}
+              >
+                <AddNFTBox onClick={() => toggleCreateNFTModal()} theme={theme}>
+                  {theme === "dark" ? <AddNFTIcon /> : <AddNFTIconLight />}
+                </AddNFTBox>
+              </button>
             </Box>
             <Box
               style={{
