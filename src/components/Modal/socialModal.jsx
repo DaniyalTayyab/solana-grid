@@ -1,4 +1,4 @@
-import { Fade, Modal } from "@mui/material";
+import { Fade, Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import {
   MintingInPrcessText,
@@ -30,6 +30,18 @@ function SocialModal(props) {
     >
       <Fade in={open} style={{ width: "500px", height: "500px" }}>
         <MintModalWrapper theme={theme}>
+          <Typography
+            style={{
+              position: "absolute",
+              top: "15px",
+              right: "25px",
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+            onClick={() => closeModal()}
+          >
+            x
+          </Typography>
           <MintingInPrcessText
             theme={theme}
             style={{ fontSize: "25px", marginBottom: "10px" }}

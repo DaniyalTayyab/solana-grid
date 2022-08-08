@@ -51,7 +51,7 @@ export default function Profile() {
         closeModal={() => setSocialModal(false)}
         theme={theme}
       />
-      <Box style={{ height: "274px" }}>
+      <Box>
         <Header profileScreen />
       </Box>
       <GoldDivider theme={theme} />
@@ -89,150 +89,167 @@ export default function Profile() {
               }}
             >
               {dummyArr.map((obj, index) => (
-                <Box
-                  key={`${index}nft`}
+                <button
+                  onClick={toggleCreateNFTModal}
                   style={{
-                    width: "346px",
-                    height: "437px",
+                    padding: "0",
+                    margin: "0",
                     background:
                       theme === "dark"
                         ? "#0A0A0A 0% 0% no-repeat padding-box"
                         : "white",
                     borderRadius: "10px",
-                    marginRight: 20,
-                    marginTop: 20,
-                    paddingRight: 10,
-                    paddingLeft: 10,
+                    border: "none",
+                    boxShadow: "0 5px 10px rgb(0,0,0,0.5)",
+                    // marginTop: "20px",
+                    // marginTop: "20px",
                   }}
                 >
                   <Box
+                    key={`${index}nft`}
                     style={{
-                      width: "100%",
-                      height: "254px",
-
-                      display: "grid",
-                      placeItems: "center",
-                      marginTop: 30,
-                    }}
-                  >
-                    <img
-                      src={NFTImage}
-                      alt="not found"
-                      style={{ width: 274, height: 218 }}
-                    />
-                  </Box>
-                  <Box
-                    style={{
-                      color: "white",
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-around",
-                    }}
-                  >
-                    <Typography
-                      style={{
-                        textAlign: "left",
-                        letterSpacing: "0px",
-                        font: "normal normal normal 17px/32px Poppins",
-                        color: theme === "dark" ? "#B4951D" : "#6C26B1",
-                        opacity: 1,
-                      }}
-                    >
-                      Size: 16x16
-                    </Typography>
-                    <Typography
-                      style={{
-                        textAlign: "left",
-                        letterSpacing: "0px",
-                        font: "normal normal normal 17px/32px Poppins",
-                        color: theme === "dark" ? "#B4951D" : "#6C26B1",
-                        opacity: 1,
-                      }}
-                    >
-                      ID: 152236
-                    </Typography>
-                  </Box>
-                  <Box
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      marginLeft: 45,
+                      width: "346px",
+                      height: "437px",
+                      background:
+                        theme === "dark"
+                          ? "#0A0A0A 0% 0% no-repeat padding-box"
+                          : "white",
+                      borderRadius: "10px",
+                      marginRight: 20,
                       marginTop: 20,
-                      color: theme === "dark" ? "white" : "black",
+                      // paddingRight: 10,
+                      paddingLeft: 10,
                     }}
                   >
                     <Box
                       style={{
+                        width: "100%",
+                        height: "254px",
+
+                        display: "grid",
+                        placeItems: "center",
+                        marginTop: 30,
+                      }}
+                    >
+                      <img
+                        src={NFTImage}
+                        alt="not found"
+                        style={{ width: 274, height: 218 }}
+                      />
+                    </Box>
+                    <Box
+                      style={{
+                        color: "white",
                         display: "flex",
                         flexDirection: "row",
-                        alignItems: "center",
+                        justifyContent: "space-around",
                       }}
                     >
                       <Typography
                         style={{
-                          minWidth: 70,
-                          maxWidth: 70,
-                          font: "normal normal normal 14px/24px Poppins",
+                          textAlign: "left",
                           letterSpacing: "0px",
-                          color: theme === "dark" ? "white" : "black",
-                          fontWeight: "400",
+                          font: "normal normal normal 17px/32px Poppins",
+                          color: theme === "dark" ? "#B4951D" : "#6C26B1",
+                          opacity: 1,
                         }}
                       >
-                        Name:
+                        Size: 16x16
                       </Typography>
                       <Typography
                         style={{
                           textAlign: "left",
-                          font: "normal normal normal 10px/17px Poppins",
                           letterSpacing: "0px",
-                          color: theme === "dark" ? "white" : "black",
-                          opacity: 0.5,
-                          fontSize: "12px",
+                          font: "normal normal normal 17px/32px Poppins",
+                          color: theme === "dark" ? "#B4951D" : "#6C26B1",
+                          opacity: 1,
                         }}
                       >
-                        Lorem Ipsum
+                        ID: 152236
                       </Typography>
                     </Box>
                     <Box
                       style={{
                         display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center",
+                        flexDirection: "column",
+                        marginLeft: 45,
+                        marginTop: 20,
+                        color: theme === "dark" ? "white" : "black",
                       }}
                     >
-                      <Typography
+                      <Box
                         style={{
-                          minWidth: 70,
-                          maxWidth: 70,
-                          font: "normal normal normal 14px/24px Poppins",
-                          letterSpacing: "0px",
-
-                          color: theme === "dark" ? "white" : "black",
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
                         }}
                       >
-                        Bio:
-                      </Typography>
-                      <Typography
+                        <Typography
+                          style={{
+                            minWidth: 70,
+                            maxWidth: 70,
+                            font: "normal normal normal 14px/24px Poppins",
+                            letterSpacing: "0px",
+                            color: theme === "dark" ? "white" : "black",
+                            fontWeight: "400",
+                          }}
+                        >
+                          Name:
+                        </Typography>
+                        <Typography
+                          style={{
+                            textAlign: "left",
+                            font: "normal normal normal 10px/17px Poppins",
+                            letterSpacing: "0px",
+                            color: theme === "dark" ? "white" : "black",
+                            opacity: 0.5,
+                            fontSize: "12px",
+                          }}
+                        >
+                          Lorem Ipsum
+                        </Typography>
+                      </Box>
+                      <Box
                         style={{
-                          width: "250px",
-                          textOverflow: "ellipsis",
-                          overflow: "hidden",
-                          whiteSpace: "nowrap",
-                          textAlign: "left",
-                          font: "normal normal normal 10px/17px Poppins",
-                          letterSpacing: "0px",
-                          color: theme === "dark" ? "white" : "black",
-                          opacity: 0.5,
-                          fontSize: "12px",
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
                         }}
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam.
-                      </Typography>
+                        <Typography
+                          style={{
+                            minWidth: 70,
+                            maxWidth: 70,
+                            font: "normal normal normal 14px/24px Poppins",
+                            letterSpacing: "0px",
+                            color: theme === "dark" ? "white" : "black",
+                            marginLeft: "-6px",
+                          }}
+                        >
+                          Bio:
+                        </Typography>
+                        <Typography
+                          style={{
+                            width: "250px",
+                            textOverflow: "ellipsis",
+                            overflow: "hidden",
+                            whiteSpace: "nowrap",
+                            textAlign: "left",
+                            font: "normal normal normal 10px/17px Poppins",
+                            letterSpacing: "0px",
+                            color: theme === "dark" ? "white" : "black",
+                            opacity: 0.5,
+                            fontSize: "12px",
+                          }}
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam.
+                        </Typography>
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
+                </button>
               ))}
               <AddNFTBox onClick={() => toggleCreateNFTModal()} theme={theme}>
                 {theme === "dark" ? <AddNFTIcon /> : <AddNFTIconLight />}
