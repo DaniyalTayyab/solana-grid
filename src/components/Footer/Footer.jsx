@@ -11,7 +11,12 @@ import TwitterIconGold from "../../assets/svg-icons/TwitterIcon";
 
 import TwitterIconLight from "../../assets/svg-icons/TwitterLightFooter";
 
-import { BuyButton, CopyrightText, FooterWrapper } from "./footer.styles";
+import {
+  BuyButton,
+  CopyrightText,
+  FooterWrapper,
+  SocailWrpper,
+} from "./footer.styles";
 
 export default function Footer() {
   const theme = useSelector((state) => state.theme.value);
@@ -25,18 +30,12 @@ export default function Footer() {
       >
         Buy on OS
       </BuyButton>
-      <Box
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "row",
-        }}
-      >
+      <SocailWrpper>
         {theme === "dark" ? <DiscordIconGold /> : <DiscordIconLight />}
         <Box style={{ marginLeft: 20, marginRight: 60 }}>
           {theme === "dark" ? <TwitterIconGold /> : <TwitterIconLight />}
         </Box>
-      </Box>
+      </SocailWrpper>
     </FooterWrapper>
   );
 }

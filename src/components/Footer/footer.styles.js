@@ -3,12 +3,13 @@ import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 120px;
+  height: 70px;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
 `;
+
 export const CopyrightText = styled.span`
   text-align: left;
   font: normal normal normal 17px/32px Poppins;
@@ -31,4 +32,17 @@ export const BuyButton = styled(Button)`
   font: normal normal 600 16px/24px Poppins;
   letter-spacing: 0px;
   color: ${(props) => (props.theme === "dark" ? "#303030" : "white")};
+
+  @media screen and (max-width: 768px) {
+    margin-right: 20px;
+  }
+`;
+
+export const SocailWrpper = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

@@ -38,7 +38,7 @@ export default function Home() {
         sidePanel={sidePanel}
       />
       <Popup popup={popup} theme={theme} closePopup={() => closePopup()} />
-      <Box style={{ height: "126px" }}>
+      <Box>
         <Header />
       </Box>
 

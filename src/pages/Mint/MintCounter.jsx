@@ -11,8 +11,12 @@ function MintCounter(props) {
     <div
       style={{
         padding: "20px",
-        width: "276px",
+        // width: "276px",
+        // height: "176px",
+        width: "176px",
         height: "176px",
+        marginRight: "7px",
+        // marginTop: "40px",
         background:
           theme === "dark"
             ? "transparent linear-gradient(129deg, #D3B651 0%, #F0D87B 46%, #C77131 100%) 0% 0% no-repeat padding-box"
@@ -82,7 +86,7 @@ function MintCounter(props) {
           }}
         >
           <button
-            onClick={() => setCount((count) => (count > 1 ? count : 0))}
+            onClick={() => setCount((count) => (count > 1 ? count - 1 : 0))}
             style={{
               background: "transparent",
               border: "none",
@@ -109,7 +113,7 @@ function MintCounter(props) {
             style={{ marginTop: 10, marginBottom: 10 }}
           />
           <button
-            onClick={() => setCount(count + 1)}
+            onClick={() => setCount((count) => (count < 3 ? count + 1 : count))}
             style={{
               cursor: "pointer",
               background: "transparent",

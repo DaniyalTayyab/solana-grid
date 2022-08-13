@@ -24,7 +24,6 @@ export default function Header(props) {
   const dispatch = useDispatch();
   const { profileScreen } = props;
   return (
-    // <FixedHeader profileScreen={profileScreen}>
     <HeaderWrapper profileScreen={profileScreen} theme={theme}>
       <Logo profileScreen={profileScreen}>
         {theme === "dark" ? <RichLogo /> : <RichLogoLight />}
@@ -63,7 +62,7 @@ export default function Header(props) {
             placeItems: "center",
             position: "relative",
             marginLeft: "auto",
-            top: "-110px",
+            top: "-90px",
             //-130
             marginRight: 110,
           }}
@@ -71,8 +70,6 @@ export default function Header(props) {
           {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />}
         </div>
       )}
-
-      {/* <GoldDivider theme={theme} /> */}
     </HeaderWrapper>
     // </FixedHeader>
   );
