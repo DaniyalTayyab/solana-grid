@@ -3,10 +3,16 @@ import { Box } from "@mui/system";
 import React from "react";
 import CloseIcon from "../../assets/svg-icons/CloseIcon";
 import NFTImage from "../../assets/nft-image.png";
+import NFTSmall from "../../assets/smallnft.png";
+import NFTMedium from "../../assets/mediumnft.png";
+import NFTLarge from "../../assets/largenft.png";
+import NFTUltra from "../../assets/ultranft.png";
+import NFTMega from "../../assets/meganft.png";
 import { DescriptionWrapper, MainText, SecondaryText } from "./popup.styles";
 
 export default function Popup(props) {
-  const { popup, theme, closePopup } = props;
+  const { popup, theme, closePopup, boxSize } = props;
+
   return (
     <Popper open={Boolean(popup)} anchorEl={popup}>
       <Box
@@ -44,11 +50,11 @@ export default function Popup(props) {
         >
           <img
             alt="not found"
-            src={NFTImage}
+            src={boxSize === "small" ? NFTSmall : boxSize === "medium" ? NFTMedium : boxSize === "large" ? NFTLarge : boxSize === "ultra" ? NFTUltra : boxSize === "mega" ? NFTMega : NFTSmall }
             style={{
               width: "184px",
               height: "184px",
-              border: "2px solid #F0D87B",
+              // border: "2px solid #F0D87B",
               borderRadius: "20px",
             }}
           />

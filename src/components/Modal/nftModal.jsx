@@ -30,7 +30,7 @@ function NftModal(props) {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 794,
-    height: 794,
+    height: 670,
     background:
       theme === "dark"
         ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
@@ -201,7 +201,7 @@ function NftModal(props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              marginTop: 100,
+              marginTop: 50,
             }}
           >
             <DoneButton

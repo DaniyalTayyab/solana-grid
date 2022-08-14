@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Tile(props) {
   const { type, toggleSideDrawer, handleHover, coordinates, theme } = props;

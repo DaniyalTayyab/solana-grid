@@ -32,7 +32,7 @@ export default function Footer() {
       </BuyButton>
       <SocailWrpper>
         {theme === "dark" ? <DiscordIconGold /> : <DiscordIconLight />}
-        <Box style={{ marginLeft: 20, marginRight: 60 }}>
+        <Box style={{  marginRight: 20 }}>
           {theme === "dark" ? <TwitterIconGold /> : <TwitterIconLight />}
         </Box>
       </SocailWrpper>

@@ -119,7 +119,7 @@ export const ProgressBarContainer = styled(Box)({
 export const ViewTransactionButton = styled(BuyButton)({
   borderRadius: "56px",
   marginTop: "auto",
-  marginBottom: 110,
+  marginBottom: 50,
   boxShadow: "0px 31px 19px #00000045",
 });
 

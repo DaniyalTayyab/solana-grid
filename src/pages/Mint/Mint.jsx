@@ -32,7 +32,7 @@ function Mint() {
               : "url(/background-light.png)",
         }}
       >
-        <ProfileWrapper theme={theme}>
+        <ProfileWrapper theme={theme} >
           <Box
             style={{
               width: "100%",
@@ -54,8 +54,8 @@ function Mint() {
               <MintCounter variant="Large" balance="0.001 SOL" />
               <MintCounter variant="Mega" balance="0.001 SOL" />
             </CounterBox>
-            <Box>
-              Total Price{" "}
+            <Box style={{ marginTop: "30px", fontSize: "22px",}}>
+              Total Price:{" "}
               <span style={{ textDecoration: "underline", marginLeft: 20 }}>
                 {" "}
                 200$

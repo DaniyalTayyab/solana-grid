@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import {Link} from "react-router-dom";
 
 export const HeaderWrapper = styled.div`
   background: ${(props) =>
@@ -7,11 +8,17 @@ export const HeaderWrapper = styled.div`
       : "transparent linear-gradient(247deg, #5E47B3 0%, #C2589B 100%) 0% 0% no-repeat padding-box"};
   /* height: ${(props) => (props.profileScreen ? "274px" : "126px")}; */
   /* height: 126px; */
-  height: 70px;
+  // height: ${(props) => (props.profileScreen ? "47px" : "60px")}
+  height: 47px;
   display: flex;
   align-items: center;
   justify-content: ${(props) => (props.profileScreen ? "center" : "")};
   flex-direction: ${(props) => (props.profileScreen ? "column" : "row")};
+
+  @media screen and (max-width: 768px) {
+    // width: 100%; 
+    // justify-content: flex-start;
+  }
 `;
 export const RightItems = styled.div`
   margin-left: auto;
@@ -26,7 +33,7 @@ export const DisconnectButton = styled.button`
   color: ${(props) => (props.theme === "dark" ? "#303030" : "white")};
   opacity: 1;
   width: 200px;
-  height: 48px;
+  height: 38px;
   margin-left: 18px;
   margin-right: 24px;
   /* UI Properties */
@@ -39,6 +46,10 @@ export const DisconnectButton = styled.button`
   box-shadow: 0px 31px 18px #00000045;
   border-radius: 56px;
   opacity: 1;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Logo = styled.div`
@@ -69,4 +80,26 @@ export const FixedHeader = styled.div`
   left: 0;
   right: 0;
   z-index: ${(props) => (props.profileScreen ? 1 : 2000)};
+`;
+
+export const ProfileIcon = styled(Link)`
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ThemeIconWrapper = styled.div`
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin-left: auto;
+  top: -85px;
+  margin-right: 110px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 20px;
+  }
 `;

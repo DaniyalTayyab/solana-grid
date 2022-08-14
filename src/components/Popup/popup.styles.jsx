@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import {Box} from "@mui/system";
 
 export const MainText = styled.span`
   font: normal normal normal 9px/24px Poppins;

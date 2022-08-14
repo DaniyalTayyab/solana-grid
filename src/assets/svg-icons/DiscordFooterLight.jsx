@@ -4,7 +4,7 @@ const DiscordFooterLight = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="56.96"
-      height="57"
+      height="37"
       viewBox="0 0 56.96 57"
     >
       <defs>

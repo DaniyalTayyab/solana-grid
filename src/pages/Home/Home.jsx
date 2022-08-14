@@ -15,13 +15,16 @@ export default function Home() {
   const theme = useSelector((state) => state.theme.value);
   const [sidePanel, setSidePanel] = useState(false);
   const [popup, setPopup] = useState(null);
+  const [boxSize, setBoxSize] = useState("small");
+
   const toggleSideDrawer = (type) => {
     setSidePanel(!sidePanel);
-    console.log(type);
+    setBoxSize(type);
   };
 
   const handleHover = (event) => {
     setPopup(event.currentTarget);
+
   };
   const closePopup = () => setPopup(false);
   useEffect(() => {
@@ -36,8 +39,9 @@ export default function Home() {
         theme={theme}
         toggleDrawer={() => toggleSideDrawer()}
         sidePanel={sidePanel}
+        boxSize={boxSize}
       />
-      <Popup popup={popup} theme={theme} closePopup={() => closePopup()} />
+      <Popup popup={popup} theme={theme} closePopup={() => closePopup()} boxSize={boxSize} />
       <Box>
         <Header />
       </Box>
@@ -67,6 +71,7 @@ export default function Home() {
                 index={index}
                 toggleSideDrawer={toggleSideDrawer}
                 handleHover={handleHover}
+               
               />
             ))}
           </TileCanvas>

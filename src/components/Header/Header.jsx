@@ -14,6 +14,8 @@ import {
   HeaderWrapper,
   Logo,
   RightItems,
+  ProfileIcon,
+  ThemeIconWrapper,
 } from "./header.styles.js";
 import RichLogoLight from "../../assets/svg-icons/RichLogo_light.jsx";
 import ThemeIconLight from "../../assets/svg-icons/ThemeIcon_light.jsx";
@@ -30,9 +32,9 @@ export default function Header(props) {
       </Logo>
       {!profileScreen && (
         <RightItems>
-          <Link to="/profile">
+          <ProfileIcon to="/profile">
             {theme === "dark" ? <UserIcon /> : <ProfileIconLight />}
-          </Link>
+          </ProfileIcon>
           <Link to="/mint">
             <DisconnectButton theme={theme}> Connect Wallet </DisconnectButton>
           </Link>
@@ -52,25 +54,12 @@ export default function Header(props) {
       )}
       {/* {profileScreen && <AccountText theme={theme}>My Account</AccountText>} */}
       {profileScreen && (
-        <div
+        <ThemeIconWrapper
           onClick={() => dispatch(changeTheme())}
-          style={{
-            cursor: "pointer",
-            width: 40,
-            height: 40,
-            display: "grid",
-            placeItems: "center",
-            position: "relative",
-            marginLeft: "auto",
-            top: "-90px",
-            //-130
-            marginRight: 110,
-          }}
         >
-          {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />}
-        </div>
+          {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />} 
+        </ThemeIconWrapper>
       )}
     </HeaderWrapper>
-    // </FixedHeader>
   );
 }

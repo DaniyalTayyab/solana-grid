@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 70px;
+  height: 42px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -16,10 +16,14 @@ export const CopyrightText = styled.span`
   letter-spacing: 0px;
   color: ${(props) => (props.theme === "dark" ? "#b4951d" : "#8D65B5")};
   margin-left: 60px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const BuyButton = styled(Button)`
   width: 200px;
-  height: 48px;
+  height: 32px;
   /* UI Properties */
   color: #303030;
   background: ${(props) =>

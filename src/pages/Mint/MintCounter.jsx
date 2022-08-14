@@ -10,13 +10,10 @@ function MintCounter(props) {
   return (
     <div
       style={{
-        padding: "20px",
-        // width: "276px",
-        // height: "176px",
-        width: "176px",
-        height: "176px",
+        padding: "10px 20px",
+        width: "236px",
+        height: "156px",
         marginRight: "7px",
-        // marginTop: "40px",
         background:
           theme === "dark"
             ? "transparent linear-gradient(129deg, #D3B651 0%, #F0D87B 46%, #C77131 100%) 0% 0% no-repeat padding-box"
@@ -27,7 +24,7 @@ function MintCounter(props) {
         opacity: 1,
         display: "flex",
         flexDirection: "column",
-        marginTop: "80px",
+        marginTop: "30px",
       }}
       {...props}
     >
@@ -53,7 +50,7 @@ function MintCounter(props) {
           letterSpacing: "0.65px",
           color: "#FFFFFF",
           opacity: 1,
-          marginTop: 20,
+          marginTop: 10,
         }}
       >
         {balance}
@@ -64,7 +61,7 @@ function MintCounter(props) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: 40,
+          marginTop: 30,
         }}
       >
         <Box

@@ -5,7 +5,7 @@ export function RichLogo() {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="253"
       // height='107.08'
-      height="50"
+      height="40"
       viewBox="0 0 253 107.08"
     >
       <defs>

@@ -1,4 +1,14 @@
 import styled from "@emotion/styled";
+import {Box, Typography} from "@mui/material";
+
+export const SidePanelWrapper = styled(Box)`
+  width: 577px;
+  boxShadow: 0px 3px 6px #00000029;
+
+  @media screen and (max-width: 768px) {
+    width: 440px;
+  }
+`;
 
 export const MainText = styled.span`
   font: normal normal normal 22px/24px Poppins;
@@ -36,12 +46,15 @@ export const NFTImage = styled.div`
   margin-bottom: 67px;
   background-image: url(${(props) => props.img});
   background-size: cover;
+  position: relative;
+`;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: gold;
-  }
+export const NFTIdText = styled(Typography)`
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  font: normal normal normal 28px/24px Poppins;
+  margin-right: 12;
+
+
 `;

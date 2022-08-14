@@ -10,17 +10,31 @@ export const ProfileWrapper = styled.div`
       : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box"};
   border-radius: 10px;
   width: 81%;
-  min-height: 843px;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  min-height: 590px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding-left: 67px;
   padding-right: 67px;
-  padding-bottom: 48px;
+
+  @media screen and (max-width: 768px) {
+    width: 500px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
 `;
 export const AddNFTBox = styled.div`
   cursor: pointer;
-  width: 346px;
-  height: 437px;
+  width: 300px;
+  height: 400px;
+  // width: 346px;
+  // height: 437px;
   /* UI Properties */
   background: ${(props) =>
     props.theme === "dark" ? "#0a0a0a 0% 0% no-repeat padding-box" : "white"};
@@ -28,5 +42,11 @@ export const AddNFTBox = styled.div`
   place-items: center;
   border-radius: 10px;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-bottom: 15px;
+  // padding-left: 10px
+  // margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;

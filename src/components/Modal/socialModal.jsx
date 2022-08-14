@@ -29,7 +29,7 @@ function SocialModal(props) {
       disableAutoFocus
     >
       <Fade in={open} style={{ width: "500px", height: "500px" }}>
-        <MintModalWrapper theme={theme}>
+        <MintModalWrapper theme={theme} style={{height: "350px", justifyContent: "flex-start"}}>
           <Typography
             style={{
               position: "absolute",
@@ -44,7 +44,7 @@ function SocialModal(props) {
           </Typography>
           <MintingInPrcessText
             theme={theme}
-            style={{ fontSize: "25px", marginBottom: "10px" }}
+            style={{ fontSize: "25px", marginBottom: "10px", marginTop: "0" }}
           >
             Edit your social
           </MintingInPrcessText>

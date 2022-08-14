@@ -73,7 +73,7 @@ export default function Profile() {
                 font: "normal normal bold 38px/50px Roboto",
                 letterSpacing: "0px",
                 color: theme === "dark" ? "#E1C869" : "white",
-                marginTop: 20,
+                marginTop: "5px",
               }}
             >
               What do you own
@@ -84,22 +84,23 @@ export default function Profile() {
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexWrap: "wrap",
-                marginTop: 44,
+                marginTop: "10px",
               }}
             >
               {dummyArr.map((obj, index) => (
                 <Box
                   key={`${index}nft`}
                   style={{
-                    width: "346px",
-                    height: "437px",
+                    width: "300px",
+                    height: "400px",
                     background:
                       theme === "dark"
                         ? "#0A0A0A 0% 0% no-repeat padding-box"
                         : "white",
                     borderRadius: "10px",
                     marginRight: 20,
-                    marginTop: 20,
+                    marginBottom: 15,
+                    // marginTop: 15,
                     paddingLeft: 10,
                   }}
                 >
@@ -110,13 +111,13 @@ export default function Profile() {
 
                       display: "grid",
                       placeItems: "center",
-                      marginTop: 30,
+                      marginTop: 10,
                     }}
                   >
                     <img
                       src={NFTImage}
                       alt="not found"
-                      style={{ width: 274, height: 218 }}
+                      style={{ width: 254, height: 190 }}
                     />
                   </Box>
                   <Box
@@ -155,7 +156,7 @@ export default function Profile() {
                       display: "flex",
                       flexDirection: "column",
                       marginLeft: 45,
-                      marginTop: 20,
+                      marginTop: 10,
                       color: theme === "dark" ? "white" : "black",
                     }}
                   >
@@ -205,7 +206,7 @@ export default function Profile() {
                           font: "normal normal normal 14px/24px Poppins",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
-                          marginLeft: "-6px",
+                  
                         }}
                       >
                         Bio:
@@ -243,7 +244,7 @@ export default function Profile() {
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 100,
+                marginTop: 30,
               }}
             >
               <Box
