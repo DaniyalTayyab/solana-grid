@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const MainText = styled.span`
   font: normal normal normal 22px/24px Poppins;
@@ -24,4 +24,24 @@ export const SecondaryText = styled.span`
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 0.5;
+`;
+
+export const NFTImage = styled.div`
+  width: 431px;
+  height: 505px;
+  margin-top: 58;
+  margin-left: 54;
+  border-radius: 20px;
+  opacity: 1;
+  margin-bottom: 67px;
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: gold;
+  }
 `;

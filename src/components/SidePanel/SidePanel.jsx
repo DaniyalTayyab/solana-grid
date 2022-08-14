@@ -1,10 +1,16 @@
 import { Box, Drawer, Typography } from "@mui/material";
 import React from "react";
-import NFT from "../../assets/nft-image.png";
+// import NFT from "../../assets/nft-image.png";
+import NFT from "../../assets/nft3.png";
 import CloseIcon from "../../assets/svg-icons/CloseIcon";
 import GoldHeartIcon from "../../assets/svg-icons/GoldHeartIcon";
 import { GoldDivider } from "../../pages/Home/home.styles";
-import { DescriptionWrapper, MainText, SecondaryText } from "./panel.styles";
+import {
+  DescriptionWrapper,
+  MainText,
+  SecondaryText,
+  NFTImage,
+} from "./panel.styles";
 
 export default function SidePanel(props) {
   const { toggleDrawer, sidePanel, theme } = props;
@@ -18,25 +24,21 @@ export default function SidePanel(props) {
               ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
               : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
           boxShadow: "0px 3px 6px #00000029",
-          paddingTop: 150,
         }}
       >
         <Box style={{ float: "right" }} onClick={() => toggleDrawer()}>
           <CloseIcon />
         </Box>
-        <img
-          alt="not found"
-          src={NFT}
+        <Box
           style={{
-            width: "431px",
-            height: "505px",
-            marginTop: 58,
-            marginLeft: 54,
-            borderRadius: "20px",
-            opacity: 1,
-            marginBottom: "67px",
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        />
+        >
+          <NFTImage img={NFT} />
+        </Box>
         <GoldDivider height="3px" />
         <Box
           style={{
