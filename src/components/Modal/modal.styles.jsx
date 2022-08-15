@@ -57,8 +57,8 @@ export const MintModalWrapper = styled(Box)((props) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "1078px",
-  height: "543px",
+  width: "900px",
+  height: "500px",
   background:
     props.theme === "dark"
       ? "transparent linear-gradient(110deg, #132842 0%, #136587 48%, #052137 100%) 0% 0% no-repeat padding-box"
@@ -78,6 +78,7 @@ export const ProgressText = styled("p")((props) => ({
   letterSpacing: "0px",
   color: props.theme === "dark" ? "#E1C869" : "white",
   opacity: 1,
+  marginTop: 2,
 }));
 
 export const ProgressTextCompleted = styled("p")((props) => ({
@@ -87,6 +88,7 @@ export const ProgressTextCompleted = styled("p")((props) => ({
   letterSpacing: "0px",
   color: props.theme === "dark" ? "#E1C869" : "white",
   opacity: 1,
+  marginTop: 2,
 }));
 
 export const MintingInPrcessText = styled(Typography)((props) => ({
@@ -99,7 +101,7 @@ export const MintingInPrcessText = styled(Typography)((props) => ({
 }));
 
 export const GradientBackgroundBox = styled(Box)((props) => ({
-  width: "872px",
+  width: "672px",
   height: "21px",
   background:
     props.theme === "dark"
@@ -121,6 +123,7 @@ export const ViewTransactionButton = styled(BuyButton)({
   marginTop: "auto",
   marginBottom: 50,
   boxShadow: "0px 31px 19px #00000045",
+  padding: "25px 20px",
 });
 
 export const DoneButton = styled(Button)(`

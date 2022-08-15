@@ -3,16 +3,19 @@ import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 42px;
+  height: 50px;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const CopyrightText = styled.span`
   text-align: left;
-  font: normal normal normal 17px/32px Poppins;
   letter-spacing: 0px;
   color: ${(props) => (props.theme === "dark" ? "#b4951d" : "#8D65B5")};
   margin-left: 60px;
@@ -23,7 +26,7 @@ export const CopyrightText = styled.span`
 `;
 export const BuyButton = styled(Button)`
   width: 200px;
-  height: 32px;
+  height: 38px;
   /* UI Properties */
   color: #303030;
   background: ${(props) =>
@@ -44,7 +47,9 @@ export const BuyButton = styled(Button)`
 
 export const SocailWrpper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 10px;
 
   @media screen and (max-width: 768px) {
     display: none;

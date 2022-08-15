@@ -29,7 +29,10 @@ function SocialModal(props) {
       disableAutoFocus
     >
       <Fade in={open} style={{ width: "500px", height: "500px" }}>
-        <MintModalWrapper theme={theme} style={{height: "350px", justifyContent: "flex-start"}}>
+        <MintModalWrapper
+          theme={theme}
+          style={{ height: "350px", justifyContent: "flex-start" }}
+        >
           <Typography
             style={{
               position: "absolute",
@@ -127,7 +130,7 @@ function SocialModal(props) {
           <ViewTransactionButton
             theme={theme}
             onClick={() => startMint()}
-            style={{ marginTop: "20px" }}
+            style={{ marginTop: "20px", padding: "15px" }}
           >
             Save
           </ViewTransactionButton>

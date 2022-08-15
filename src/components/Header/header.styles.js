@@ -1,22 +1,19 @@
 import styled from "@emotion/styled";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const HeaderWrapper = styled.div`
   background: ${(props) =>
     props.theme === "dark"
       ? "transparent linear-gradient(90deg, #132842 0%, #136789 49%, #042036 100%) 0% 0% no-repeat padding-box"
       : "transparent linear-gradient(247deg, #5E47B3 0%, #C2589B 100%) 0% 0% no-repeat padding-box"};
-  /* height: ${(props) => (props.profileScreen ? "274px" : "126px")}; */
-  /* height: 126px; */
-  // height: ${(props) => (props.profileScreen ? "47px" : "60px")}
-  height: 47px;
+  height: ${(props) => (props.profileScreen ? "274px" : "126px")};
   display: flex;
   align-items: center;
   justify-content: ${(props) => (props.profileScreen ? "center" : "")};
   flex-direction: ${(props) => (props.profileScreen ? "column" : "row")};
 
   @media screen and (max-width: 768px) {
-    // width: 100%; 
+    // width: 100%;
     // justify-content: flex-start;
   }
 `;
@@ -96,7 +93,7 @@ export const ThemeIconWrapper = styled.div`
   place-items: center;
   position: relative;
   margin-left: auto;
-  top: -85px;
+  top: -110px;
   margin-right: 110px;
 
   @media screen and (max-width: 768px) {

@@ -14,7 +14,7 @@ function Mint() {
   const [mintingModal, setMintingModal] = useState(false);
   const theme = useSelector((state) => state.theme.value);
   return (
-    <Box>
+    <Box style={{ marginTop: "274px" }}>
       <MintModal
         theme={theme}
         open={mintingModal}
@@ -32,7 +32,7 @@ function Mint() {
               : "url(/background-light.png)",
         }}
       >
-        <ProfileWrapper theme={theme} >
+        <ProfileWrapper theme={theme}>
           <Box
             style={{
               width: "100%",
@@ -54,16 +54,27 @@ function Mint() {
               <MintCounter variant="Large" balance="0.001 SOL" />
               <MintCounter variant="Mega" balance="0.001 SOL" />
             </CounterBox>
-            <Box style={{ marginTop: "30px", fontSize: "22px",}}>
-              Total Price:{" "}
-              <span style={{ textDecoration: "underline", marginLeft: 20 }}>
-                {" "}
-                200$
-              </span>
+            <Box
+              style={{
+                marginTop: "30px",
+                fontSize: "22px",
+                display: "flex",
+                alignItems: "baseline",
+                // fontWeight: "bold",
+              }}
+            >
+              Total Price:
+              <div
+                style={{
+                  width: "200px",
+                  borderBottom: "1px solid #d7b179",
+                  marginLeft: "15px",
+                }}
+              ></div>
             </Box>
             <GoldDivider height="4px" theme={theme} />
             <BuyButton
-              style={{ borderRadius: "56px", marginTop: 10 }}
+              style={{ borderRadius: "56px", marginTop: "8px" }}
               onClick={() => setMintingModal(true)}
               theme={theme}
             >

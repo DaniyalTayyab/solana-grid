@@ -21,7 +21,14 @@ import {
 export default function Footer() {
   const theme = useSelector((state) => state.theme.value);
   return (
-    <FooterWrapper>
+    <FooterWrapper
+      style={{
+        backgroundImage:
+          theme === "dark"
+            ? "url(/background.png)"
+            : "url(/background-light.png)",
+      }}
+    >
       <CopyrightText theme={theme}>© All Rights Reserved</CopyrightText>
 
       <BuyButton
@@ -32,7 +39,7 @@ export default function Footer() {
       </BuyButton>
       <SocailWrpper>
         {theme === "dark" ? <DiscordIconGold /> : <DiscordIconLight />}
-        <Box style={{  marginRight: 20 }}>
+        <Box style={{ marginRight: 20 }}>
           {theme === "dark" ? <TwitterIconGold /> : <TwitterIconLight />}
         </Box>
       </SocailWrpper>

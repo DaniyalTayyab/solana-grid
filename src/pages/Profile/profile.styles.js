@@ -9,8 +9,8 @@ export const ProfileWrapper = styled.div`
       ? "transparent linear-gradient(111deg, #132842 0%, #136587 48%, #052137 100%) 0% 0% no-repeat padding-box"
       : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box"};
   border-radius: 10px;
-  width: 81%;
-  min-height: 590px;
+  width: 71%;
+  min-height: 520px;
   margin-top: 15px;
   margin-bottom: 15px;
   padding-left: 67px;

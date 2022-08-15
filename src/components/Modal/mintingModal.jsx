@@ -1,5 +1,5 @@
-import { Fade, Modal } from '@mui/material';
-import { Box } from '@mui/system';
+import { Fade, Modal } from "@mui/material";
+import { Box } from "@mui/system";
 import {
   GradientBackgroundBox,
   MintingInPrcessText,
@@ -8,13 +8,13 @@ import {
   ProgressText,
   ProgressTextCompleted,
   ViewTransactionButton,
-} from './modal.styles';
-import axios from 'axios';
+} from "./modal.styles";
+import axios from "axios";
 
 function MintModal(props) {
   const { open, closeModal, theme } = props;
   const startMint = () => {
-    axios.get('dummyroute.solidity.com/test').then((res) => {
+    axios.get("dummyroute.solidity.com/test").then((res) => {
       console.log(res);
     });
   };
@@ -27,10 +27,29 @@ function MintModal(props) {
     >
       <Fade in={open}>
         <MintModalWrapper theme={theme}>
+          <span
+            onClick={() => closeModal()}
+            style={{
+              color: "#fff",
+              fontSize: "22px",
+              fontWeight: "bold",
+              position: "absolute",
+              top: "15px",
+              right: "30px",
+              cursor: "pointer",
+            }}
+          >
+            x
+          </span>
           <MintingInPrcessText theme={theme}>
             Minting in Process
           </MintingInPrcessText>
-          <Box style={{ display: 'flex', flexDirection: 'column' }}>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <GradientBackgroundBox theme={theme} />
             <ProgressBarContainer theme={theme}>
               <ProgressText theme={theme}>0</ProgressText>

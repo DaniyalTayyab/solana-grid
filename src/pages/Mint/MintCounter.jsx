@@ -11,8 +11,10 @@ function MintCounter(props) {
     <div
       style={{
         padding: "10px 20px",
-        width: "236px",
-        height: "156px",
+        // width: "215px",
+        // height: "150px",
+        width: "170px",
+        height: "120px",
         marginRight: "7px",
         background:
           theme === "dark"
@@ -37,6 +39,8 @@ function MintCounter(props) {
           letterSpacing: "0px",
           color: theme === "dark" ? "#303030" : "white",
           opacity: 0.9,
+          // fontSize: "22px",
+          fontSize: "16px",
         }}
       >
         {variant}
@@ -50,7 +54,10 @@ function MintCounter(props) {
           letterSpacing: "0.65px",
           color: "#FFFFFF",
           opacity: 1,
-          marginTop: 10,
+          marginTop: "6px",
+          // fontSize: "20px",
+          fontSize: "18px",
+          fontWeight: "bold",
         }}
       >
         {balance}
@@ -61,7 +68,8 @@ function MintCounter(props) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: 30,
+          // marginTop: 25,
+          marginTop: 10,
         }}
       >
         <Box
@@ -69,8 +77,10 @@ function MintCounter(props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "198px",
-            height: "45px",
+            // width: "188px",
+            // height: "40px",
+            width: "160px",
+            height: "35px",
             background:
               "transparent linear-gradient(180deg, #FFFFFF 0%, #808080 100%) 0% 0% no-repeat padding-box",
             boxShadow: "0px 3px 15px #00000040",
@@ -102,7 +112,14 @@ function MintCounter(props) {
             orientation="vertical"
             style={{ marginTop: 10, marginBottom: 10 }}
           />
-          <div style={{ width: "60%", display: "grid", placeItems: "center" }}>
+          <div
+            style={{
+              width: "60%",
+              display: "grid",
+              placeItems: "center",
+              fontSize: "18px",
+            }}
+          >
             {count}
           </div>
           <Divider
