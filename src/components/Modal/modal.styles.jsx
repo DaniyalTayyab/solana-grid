@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { BuyButton } from "../Footer/footer.styles";
+import { InputUnstyled } from "@mui/base";
 
 export const NFTModalWrapper = styled(Box)`
   position: absolute;
@@ -16,7 +17,7 @@ export const NFTModalWrapper = styled(Box)`
   margin-top: 20px;
 
   @media screen and (max-width: 500px) {
-    width: 300px;
+    width: 350px;
   }
 `;
 
@@ -42,6 +43,21 @@ export const RightFormContainer = styled(Box)`
     width: 100%;
     height: auto;
     margin-top: 20px;
+  }
+`;
+
+export const LeftFormContainer = styled(Box)`
+  width: 463px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+
+  @media (max-width: 500px) {
+    width: 100px;
+    padding-left: 0px;
   }
 `;
 
@@ -111,6 +127,7 @@ export const MintModalWrapper = styled(Box)`
 
   @media (max-width: 500px) {
     width: 300px;
+    height: 100px;
   }
 `;
 
@@ -143,6 +160,10 @@ export const MintingInPrcessText = styled(Typography)`
   @media screen and (max-width: 768px) {
     font-size: 32px;
   }
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 export const GradientBackgroundBox = styled(Box)`
@@ -154,6 +175,10 @@ export const GradientBackgroundBox = styled(Box)`
 
   @media screen and (max-width: 768px) {
     width: 530px;
+  }
+
+  @media (max-width: 500px) {
+    width: 250px;
   }
 `;
 
@@ -169,6 +194,14 @@ export const ViewTransactionButton = styled(BuyButton)`
   margin-bottom: 50;
   box-shadow: 0px 31px 19px #00000045;
   padding: 25px 20px;
+
+  @media (max-width: 500px) {
+    width: 150px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0 10px;
+    margin-top: 30x;
+  }
 `;
 
 export const DoneButton = styled(Button)(`
@@ -202,4 +235,35 @@ export const Overlay = styled.div`
   backdrop-filter: blur(3px);
   z-index: 5;
   display: ${(props) => (props.open ? "block" : "none")};
+`;
+
+export const GoldDividerBox = styled(Box)`
+  width: 348px;
+  margin-top: 17px;
+
+  @media (max-width: 500px) {
+    width: 250px;
+  }
+`;
+
+export const FormTitle = styled(Typography)`
+  text-align: left;
+  font: normal normal normal 22px/24px Poppins;
+  font-weight: medium;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  width: 70px;
+  margin-right: 15px;
+
+  @media (max-width: 500px) {
+    font-size: 13px;
+    width: 30px;
+  }
+`;
+
+export const FormInput = styled(InputUnstyled)`
+  @media (max-width: 500px) {
+    width: 1px;
+  }
 `;

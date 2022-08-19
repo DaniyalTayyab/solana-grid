@@ -13,6 +13,10 @@ import {
   NFTModalWrapper,
   NFTFormWrapper,
   RightFormContainer,
+  GoldDividerBox,
+  LeftFormContainer,
+  FormTitle,
+  FormInput,
 } from "./modal.styles";
 
 const textStyle = {
@@ -100,19 +104,19 @@ function NftModal(props) {
                 <CloseIcon />
               </Box> */}
             </Box>
-            <Box style={{ width: "348px", marginTop: 17 }}>
+            <GoldDividerBox>
               <GoldDivider height="3px" theme={theme} />
-            </Box>
+            </GoldDividerBox>
           </Box>
 
           <NFTFormWrapper>
-            <Box
+            <LeftFormContainer
               id="left-form"
-              style={{
-                width: 463,
-                height: "100%",
-                paddingLeft: 56,
-              }}
+              // style={{
+              //   width: 463,
+              //   height: "100%",
+              //   paddingLeft: 56,
+              // }}
             >
               <Box
                 style={{
@@ -122,8 +126,8 @@ function NftModal(props) {
                   marginBottom: 15,
                 }}
               >
-                <Typography style={textStyle}>Name:</Typography>
-                <InputUnstyled
+                <FormTitle>Name:</FormTitle>
+                <FormInput
                   components={{ Input: InputComponent }}
                   placeholder="Name"
                 />
@@ -136,8 +140,8 @@ function NftModal(props) {
                   marginBottom: 15,
                 }}
               >
-                <Typography style={textStyle}>Bio:</Typography>
-                <InputUnstyled
+                <FormTitle>Bio:</FormTitle>
+                <FormInput
                   components={{ Input: BioInputComponent }}
                   placeholder="Bio"
                 />
@@ -149,13 +153,13 @@ function NftModal(props) {
                   alignItems: "center",
                 }}
               >
-                <Typography style={textStyle}>Link:</Typography>
-                <InputUnstyled
+                <FormTitle>Link:</FormTitle>
+                <FormInput
                   components={{ Input: InputComponent }}
                   placeholder="Link"
                 />
               </Box>
-            </Box>
+            </LeftFormContainer>
             <RightFormContainer id="right-form">
               <Box
                 style={{
