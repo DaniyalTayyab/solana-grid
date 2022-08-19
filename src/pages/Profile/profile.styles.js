@@ -20,10 +20,12 @@ export const ProfileWrapper = styled.div`
 
   @media screen and (max-width: 1030px) {
     height: 70vh;
+    padding-bottom: 20px;
+    overflow-y: auto;
   }
 
   @media screen and (max-width: 768px) {
-    width: 500px;
+    max-width: 500px;
     padding-bottom: 20px;
     overflow-y: auto;
   }

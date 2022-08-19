@@ -109,7 +109,11 @@ export const MintModalWrapper = styled(Box)`
   align-items: center;
   justify-content: flex-start;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 768px) {
+    width: 560px;
+  }
+
+  @media screen and (max--moz-device-pixel-ratio) {
     width: 560px;
   }
 `;

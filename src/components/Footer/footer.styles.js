@@ -8,10 +8,10 @@ export const FooterWrapper = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
 `;
 
 export const CopyrightText = styled.span`
