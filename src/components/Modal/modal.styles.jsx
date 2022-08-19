@@ -15,8 +15,8 @@ export const NFTModalWrapper = styled(Box)`
   opacity: 1;
   margin-top: 20px;
 
-  @media screen and (max-width: 768px) {
-    width: 560px;
+  @media screen and (max-width: 500px) {
+    width: 300px;
   }
 `;
 
@@ -109,12 +109,8 @@ export const MintModalWrapper = styled(Box)`
   align-items: center;
   justify-content: flex-start;
 
-  @media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 768px) {
-    width: 560px;
-  }
-
-  @media screen and (max--moz-device-pixel-ratio) {
-    width: 560px;
+  @media (max-width: 500px) {
+    width: 300px;
   }
 `;
 

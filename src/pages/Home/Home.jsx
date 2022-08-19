@@ -59,7 +59,7 @@ export default function Home() {
             border:
               theme === "dark" ? "1px solid #F9ECB8" : "1px solid #5E47B3",
             marginTop: 176,
-            marginBottom: 126,
+            marginBottom: 46,
           }}
         >
           {" "}

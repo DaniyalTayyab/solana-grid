@@ -2,11 +2,11 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Footer from "../../components/Footer/Footer";
-import { BuyButton } from "../../components/Footer/footer.styles";
+import { MintButton } from "./Mint.styles";
 import Header from "../../components/Header/Header";
 import MintModal from "../../components/Modal/mintingModal";
 import { GoldDivider } from "../Home/home.styles";
-import { MintProfileWrapper } from "./Mint.styles";
+import { MintProfileWrapper, TotalPrice } from "./Mint.styles";
 import MintCounter from "./MintCounter";
 import { CounterBox, MintWrapper, MaxTransaction } from "./Mint.styles";
 import { Overlay } from "../../components/Modal/modal.styles";
@@ -57,15 +57,7 @@ function Mint() {
               <MintCounter variant="Large" balance="0.001 SOL" />
               <MintCounter variant="Mega" balance="0.001 SOL" />
             </CounterBox>
-            <Box
-              style={{
-                marginTop: "70px",
-                fontSize: "22px",
-                display: "flex",
-                alignItems: "baseline",
-                // fontWeight: "bold",
-              }}
-            >
+            <TotalPrice>
               Total Price:
               <div
                 style={{
@@ -74,19 +66,19 @@ function Mint() {
                   marginLeft: "15px",
                 }}
               ></div>
-            </Box>
+            </TotalPrice>
             <GoldDivider
               height="4px"
               theme={theme}
               style={{ marginTop: "20px" }}
             />
-            <BuyButton
+            <MintButton
               style={{ borderRadius: "56px", marginTop: "25px" }}
               onClick={() => setMintingModal(true)}
               theme={theme}
             >
               Mint Now
-            </BuyButton>
+            </MintButton>
           </Box>
         </MintProfileWrapper>
         <Box style={{ marginTop: "0", width: "100%" }}>

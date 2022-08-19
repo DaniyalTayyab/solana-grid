@@ -12,7 +12,6 @@ export const GoldDivider = styled.div`
 export const TileCanvas = styled("div")({
   width: 1802,
   minHeight: 1122,
-
   position: "relative",
 });
 

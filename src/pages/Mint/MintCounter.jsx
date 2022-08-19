@@ -2,31 +2,19 @@ import { Divider } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { CoutnerWrapper } from "./MintCounter.styles";
 
 function MintCounter(props) {
   const { variant, balance } = props;
   const [count, setCount] = useState(0);
   const theme = useSelector((state) => state.theme.value);
   return (
-    <div
+    <CoutnerWrapper
       style={{
-        padding: "10px 20px",
-        // width: "215px",
-        // height: "150px",
-        width: "190px",
-        height: "150px",
-        marginRight: "7px",
         background:
           theme === "dark"
             ? "transparent linear-gradient(129deg, #D3B651 0%, #F0D87B 46%, #C77131 100%) 0% 0% no-repeat padding-box"
             : "transparent linear-gradient(129deg, #6C26B1 0%, #6C26B1 100%) 0% 0% no-repeat padding-box",
-        boxShadow: "0px 10px 20px #00000029",
-        border: "1px solid #707070",
-        borderRadius: "20px",
-        opacity: 1,
-        display: "flex",
-        flexDirection: "column",
-        marginTop: "30px",
       }}
       {...props}
     >
@@ -145,7 +133,7 @@ function MintCounter(props) {
           </button>
         </Box>
       </div>
-    </div>
+    </CoutnerWrapper>
   );
 }
 

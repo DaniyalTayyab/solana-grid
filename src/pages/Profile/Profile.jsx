@@ -2,7 +2,14 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import { GoldDivider } from "../Home/home.styles";
-import { AddNFTBox, ProfileWrapper, BlackBackground } from "./profile.styles";
+import {
+  AddNFTBox,
+  ProfileWrapper,
+  BlackBackground,
+  AddNFTCardWrpper,
+  SocialWrapper,
+  EditSocialBtn,
+} from "./profile.styles";
 import NFTImage from "../../assets/nft-image.png";
 import { Button, Typography } from "@mui/material";
 import AddNFTIcon from "../../assets/svg-icons/AddNFTIcon";
@@ -84,7 +91,7 @@ export default function Profile() {
                 font: "normal normal bold 23px Roboto",
                 letterSpacing: "0px",
                 color: theme === "dark" ? "#E1C869" : "white",
-                marginTop: "5px",
+                marginTop: "20px",
               }}
             >
               What do you own?
@@ -99,21 +106,13 @@ export default function Profile() {
               }}
             >
               {dummyArr.map((obj, index) => (
-                <Box
+                <AddNFTCardWrpper
                   key={`${index}nft`}
                   style={{
-                    // width: "300px",
-                    // height: "400px",
-                    width: "250px",
-                    height: "350px",
                     background:
                       theme === "dark"
                         ? "#0A0A0A 0% 0% no-repeat padding-box"
                         : "white",
-                    borderRadius: "10px",
-                    marginRight: 20,
-                    marginBottom: 15,
-                    marginTop: 15,
                   }}
                 >
                   <Box
@@ -255,7 +254,7 @@ export default function Profile() {
                     </Box>
                   </Box>
                   {/* new other stuff */}
-                </Box>
+                </AddNFTCardWrpper>
               ))}
               {/* ADD NFT box */}
               <AddNFTBox onClick={() => toggleCreateNFTModal()} theme={theme}>
@@ -264,15 +263,7 @@ export default function Profile() {
               {/* ADD NFT box */}
             </Box>
             {/* social icons */}
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                alignItems: "center",
-                marginTop: 30,
-              }}
-            >
+            <SocialWrapper>
               <Box
                 style={{
                   display: "flex",
@@ -296,32 +287,25 @@ export default function Profile() {
                   </>
                 )}
               </Box>
-              <Button
+              <EditSocialBtn
                 style={{
-                  width: "127px",
-                  height: "34px",
                   background:
                     theme === "dark"
                       ? "transparent linear-gradient(107deg, #D3B651 0%, #F3DF8E 55%, #C77131 100%) 0% 0% no-repeat padding-box"
                       : "#6C26B1 0% 0% no-repeat padding-box",
-                  boxShadow: "0px 13px 34px #F0D87B1A",
-                  borderRadius: "8px",
-                  opacity: 1,
+
                   color: theme === "dark" ? "black" : "white",
-                  marginTop: 20,
-                  textTransform: "none",
-                  marginBottom: 20,
                 }}
                 onClick={toggleEditSocialModal}
               >
                 Edit Socials
-              </Button>
-            </Box>
+              </EditSocialBtn>
+            </SocialWrapper>
             {/* social icons */}
             <GoldDivider theme={theme} />
           </ProfileWrapper>
         </Box>
-        <Box style={{ marginTop: "20px" }}>
+        <Box style={{ marginTop: "30px" }}>
           <GoldDivider theme={theme} />
         </Box>
       </BlackBackground>

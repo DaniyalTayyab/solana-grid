@@ -13,9 +13,8 @@ export const HeaderWrapper = styled.div`
   justify-content: ${(props) => (props.profileScreen ? "center" : "")};
   flex-direction: ${(props) => (props.profileScreen ? "column" : "row")};
 
-  @media screen and (max-width: 768px) {
-    // width: 100%;
-    // justify-content: flex-start;
+  @media screen and (max-width: 500px) {
+    justify-content: center;
   }
 `;
 export const RightItems = styled.div`

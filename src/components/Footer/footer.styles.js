@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 80px;
+  height: 70px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -12,6 +12,20 @@ export const FooterWrapper = styled.div`
   bottom: 0;
   left: 0;
   right: 0; */
+
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media all and (max-height: 980px) {
+    height: 70px;
+  }
+
+  @media all and (max-height: 882px) {
+    height: 67px;
+  }
 `;
 
 export const CopyrightText = styled.span`
@@ -22,6 +36,12 @@ export const CopyrightText = styled.span`
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 7px;
+    margin-right: 70px;
+    margin-top: 5px;
   }
 `;
 export const BuyButton = styled(Button)`

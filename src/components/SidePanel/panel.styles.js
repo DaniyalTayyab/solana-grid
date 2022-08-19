@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export const SidePanelWrapper = styled(Box)`
+  margin-top: 126px;
   width: 577px;
-  boxShadow: 0px 3px 6px #00000029;
+  boxshadow: 0px 3px 6px #00000029;
 
   @media screen and (max-width: 768px) {
     width: 440px;
@@ -51,10 +52,8 @@ export const NFTImage = styled.div`
 
 export const NFTIdText = styled(Typography)`
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
   font: normal normal normal 28px/24px Poppins;
   margin-right: 12;
-
-
 `;
