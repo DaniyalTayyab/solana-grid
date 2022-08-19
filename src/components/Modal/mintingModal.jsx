@@ -26,7 +26,15 @@ function MintModal(props) {
       disableAutoFocus
     >
       <Fade in={open}>
-        <MintModalWrapper theme={theme}>
+        <MintModalWrapper
+          theme={theme}
+          style={{
+            background:
+              theme === "dark"
+                ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
+                : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
+          }}
+        >
           <span
             onClick={() => closeModal()}
             style={{
@@ -41,7 +49,12 @@ function MintModal(props) {
           >
             x
           </span>
-          <MintingInPrcessText theme={theme}>
+          <MintingInPrcessText
+            theme={theme}
+            style={{
+              color: props.theme === "dark" ? "#E1C869" : "white",
+            }}
+          >
             Minting in Process
           </MintingInPrcessText>
           <Box
@@ -50,7 +63,15 @@ function MintModal(props) {
               flexDirection: "column",
             }}
           >
-            <GradientBackgroundBox theme={theme} />
+            <GradientBackgroundBox
+              theme={theme}
+              style={{
+                background:
+                  props.theme === "dark"
+                    ? "transparent linear-gradient(90deg, #D3B651 0%, #F0D87B 34%, #C77131 63%, #C77131 100%) 0% 0% no-repeat padding-box"
+                    : " transparent linear-gradient(90deg, #ECCBE6 0%, #CB96C0 23%, #C2589B 63%, #5E47B3 100%) 0% 0% no-repeat padding-box",
+              }}
+            />
             <ProgressBarContainer theme={theme}>
               <ProgressText theme={theme}>0</ProgressText>
               <ProgressTextCompleted theme={theme}>100</ProgressTextCompleted>

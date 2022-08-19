@@ -10,6 +10,9 @@ import {
   DoneButton,
   InputComponent,
   UploadButton,
+  NFTModalWrapper,
+  NFTFormWrapper,
+  RightFormContainer,
 } from "./modal.styles";
 
 const textStyle = {
@@ -25,19 +28,10 @@ const textStyle = {
 function NftModal(props) {
   const { open, closeModal, theme, createNFT } = props;
   const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 794,
-    height: 670,
     background:
       theme === "dark"
         ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
         : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
-    boxShadow: "0px 3px 6px #00000029",
-    borderRadius: "10px",
-    opacity: 1,
   };
   return (
     <Modal
@@ -47,7 +41,21 @@ function NftModal(props) {
       disableAutoFocus
     >
       <Fade in={open}>
-        <Box style={style}>
+        <NFTModalWrapper style={style}>
+          <span
+            onClick={() => closeModal()}
+            style={{
+              color: "#fff",
+              fontSize: "22px",
+              fontWeight: "bold",
+              position: "absolute",
+              top: "15px",
+              right: "30px",
+              cursor: "pointer",
+            }}
+          >
+            x
+          </span>
           <Box
             style={{
               height: "104px",
@@ -69,7 +77,7 @@ function NftModal(props) {
               <Typography
                 style={{
                   textAlign: "left",
-                  font: "normal normal normal 34px/45px Roboto",
+                  font: "normal normal normal 24px/35px Roboto",
                   letterSpacing: "0px",
                   color: theme === "dark" ? "#E1C869" : "white",
                   opacity: 1,
@@ -80,7 +88,7 @@ function NftModal(props) {
               <Typography
                 style={{
                   textAlign: "left",
-                  font: "normal normal normal 34px/45px Roboto",
+                  font: "normal normal normal 24px/35px Roboto",
                   letterSpacing: "0px",
                   color: theme === "dark" ? "#E1C869" : "white",
                   opacity: 1,
@@ -88,29 +96,20 @@ function NftModal(props) {
               >
                 150156
               </Typography>
-              {/* <Box style={{ marginLeft: 'auto' }}>
+              {/* <Box style={{ marginLeft: "auto" }}>
                 <CloseIcon />
               </Box> */}
             </Box>
-            <Box style={{ width: "348px", marginTop: 27 }}>
+            <Box style={{ width: "348px", marginTop: 17 }}>
               <GoldDivider height="3px" theme={theme} />
             </Box>
           </Box>
 
-          <Box
-            style={{
-              marginTop: 100,
-
-              display: "flex",
-              flexDirectiom: "row",
-              height: 357,
-            }}
-          >
+          <NFTFormWrapper>
             <Box
               id="left-form"
               style={{
                 width: 463,
-
                 height: "100%",
                 paddingLeft: 56,
               }}
@@ -120,7 +119,7 @@ function NftModal(props) {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  marginBottom: 25,
+                  marginBottom: 15,
                 }}
               >
                 <Typography style={textStyle}>Name:</Typography>
@@ -134,7 +133,7 @@ function NftModal(props) {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  marginBottom: 25,
+                  marginBottom: 15,
                 }}
               >
                 <Typography style={textStyle}>Bio:</Typography>
@@ -142,7 +141,7 @@ function NftModal(props) {
                   components={{ Input: BioInputComponent }}
                   placeholder="Bio"
                 />
-              </Box>{" "}
+              </Box>
               <Box
                 style={{
                   display: "flex",
@@ -157,17 +156,7 @@ function NftModal(props) {
                 />
               </Box>
             </Box>
-            <Box
-              id="right-form"
-              style={{
-                height: "100%",
-                width: 331,
-                display: "flex",
-                flexDirection: "column",
-
-                alignItems: "center",
-              }}
-            >
+            <RightFormContainer id="right-form">
               <Box
                 style={{
                   width: 279,
@@ -193,15 +182,15 @@ function NftModal(props) {
                   Upload Image
                 </UploadButton>
               </label>
-            </Box>
-          </Box>
+            </RightFormContainer>
+          </NFTFormWrapper>
           {/* end */}
           <Box
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              marginTop: 50,
+              marginTop: 30,
             }}
           >
             <DoneButton
@@ -214,7 +203,7 @@ function NftModal(props) {
               Done
             </DoneButton>
           </Box>
-        </Box>
+        </NFTModalWrapper>
       </Fade>
     </Modal>
   );

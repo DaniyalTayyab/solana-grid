@@ -6,7 +6,8 @@ export const HeaderWrapper = styled.div`
     props.theme === "dark"
       ? "transparent linear-gradient(90deg, #132842 0%, #136789 49%, #042036 100%) 0% 0% no-repeat padding-box"
       : "transparent linear-gradient(247deg, #5E47B3 0%, #C2589B 100%) 0% 0% no-repeat padding-box"};
-  height: ${(props) => (props.profileScreen ? "274px" : "126px")};
+  /* height: ${(props) => (props.profileScreen ? "274px" : "126px")}; */
+  height: 126px;
   display: flex;
   align-items: center;
   justify-content: ${(props) => (props.profileScreen ? "center" : "")};

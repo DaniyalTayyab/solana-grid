@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 export const FooterWrapper = styled.div`
   background: transparent;
-  height: 50px;
+  height: 80px;
   display: flex;
   width: 100%;
   align-items: center;

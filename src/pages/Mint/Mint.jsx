@@ -6,15 +6,16 @@ import { BuyButton } from "../../components/Footer/footer.styles";
 import Header from "../../components/Header/Header";
 import MintModal from "../../components/Modal/mintingModal";
 import { GoldDivider } from "../Home/home.styles";
-import { ProfileWrapper } from "../Profile/profile.styles";
+import { MintProfileWrapper } from "./Mint.styles";
 import MintCounter from "./MintCounter";
 import { CounterBox, MintWrapper, MaxTransaction } from "./Mint.styles";
+import { Overlay } from "../../components/Modal/modal.styles";
 
 function Mint() {
   const [mintingModal, setMintingModal] = useState(false);
   const theme = useSelector((state) => state.theme.value);
   return (
-    <Box style={{ marginTop: "274px" }}>
+    <Box style={{ marginTop: "126px" }}>
       <MintModal
         theme={theme}
         open={mintingModal}
@@ -26,13 +27,15 @@ function Mint() {
       <GoldDivider theme={theme} />
       <MintWrapper
         style={{
+          position: "relative",
           backgroundImage:
             theme === "dark"
               ? "url(/background.png)"
               : "url(/background-light.png)",
         }}
       >
-        <ProfileWrapper theme={theme}>
+        <Overlay open={mintingModal} />
+        <MintProfileWrapper theme={theme}>
           <Box
             style={{
               width: "100%",
@@ -56,7 +59,7 @@ function Mint() {
             </CounterBox>
             <Box
               style={{
-                marginTop: "30px",
+                marginTop: "70px",
                 fontSize: "22px",
                 display: "flex",
                 alignItems: "baseline",
@@ -72,16 +75,20 @@ function Mint() {
                 }}
               ></div>
             </Box>
-            <GoldDivider height="4px" theme={theme} />
+            <GoldDivider
+              height="4px"
+              theme={theme}
+              style={{ marginTop: "20px" }}
+            />
             <BuyButton
-              style={{ borderRadius: "56px", marginTop: "8px" }}
+              style={{ borderRadius: "56px", marginTop: "25px" }}
               onClick={() => setMintingModal(true)}
               theme={theme}
             >
               Mint Now
             </BuyButton>
           </Box>
-        </ProfileWrapper>
+        </MintProfileWrapper>
         <Box style={{ marginTop: "0", width: "100%" }}>
           <GoldDivider theme={theme} />
           <Footer />

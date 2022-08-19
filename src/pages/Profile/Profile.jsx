@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import { GoldDivider } from "../Home/home.styles";
-import { AddNFTBox, ProfileWrapper } from "./profile.styles";
+import { AddNFTBox, ProfileWrapper, BlackBackground } from "./profile.styles";
 import NFTImage from "../../assets/nft-image.png";
 import { Button, Typography } from "@mui/material";
 import AddNFTIcon from "../../assets/svg-icons/AddNFTIcon";
@@ -17,6 +17,7 @@ import DiscordLight from "../../assets/svg-icons/DiscordIcon_light";
 import InstagramIconLight from "../../assets/svg-icons/InstagramIcon_light";
 import TwitterIconLight from "../../assets/svg-icons/TwitterIcon_light";
 import axios from "axios";
+import { Overlay } from "../../components/Modal/modal.styles";
 
 const dummyArr = [1, 2];
 export default function Profile() {
@@ -54,8 +55,9 @@ export default function Profile() {
       <Box>
         <Header profileScreen />
       </Box>
-      <GoldDivider theme={theme} />
-      <Box
+      <GoldDivider theme={theme} style={{ marginTop: "126px" }} />
+
+      <BlackBackground
         style={{
           backgroundImage:
             theme === "dark"
@@ -63,20 +65,29 @@ export default function Profile() {
               : "url(/background-light.png)",
         }}
       >
-        <Box style={{ display: "grid", placeItems: "center", width: "100%" }}>
+        <Box
+          style={{
+            display: "grid",
+            placeItems: "center",
+            width: "100%",
+            position: "relative",
+          }}
+        >
+          <Overlay open={nftModal} />
+          <Overlay open={socailModal} />
           <ProfileWrapper theme={theme}>
             <Box
               style={{
                 display: "grid",
                 placeItems: "center",
                 textAlign: "left",
-                font: "normal normal bold 38px/50px Roboto",
+                font: "normal normal bold 23px Roboto",
                 letterSpacing: "0px",
                 color: theme === "dark" ? "#E1C869" : "white",
                 marginTop: "5px",
               }}
             >
-              What do you own
+              What do you own?
             </Box>
             <Box
               style={{
@@ -84,15 +95,17 @@ export default function Profile() {
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexWrap: "wrap",
-                marginTop: "10px",
+                marginTop: "15px",
               }}
             >
               {dummyArr.map((obj, index) => (
                 <Box
                   key={`${index}nft`}
                   style={{
-                    width: "300px",
-                    height: "400px",
+                    // width: "300px",
+                    // height: "400px",
+                    width: "250px",
+                    height: "350px",
                     background:
                       theme === "dark"
                         ? "#0A0A0A 0% 0% no-repeat padding-box"
@@ -100,39 +113,45 @@ export default function Profile() {
                     borderRadius: "10px",
                     marginRight: 20,
                     marginBottom: 15,
-                    // marginTop: 15,
-                    paddingLeft: 10,
+                    marginTop: 15,
                   }}
                 >
                   <Box
                     style={{
                       width: "100%",
-                      height: "254px",
-
-                      display: "grid",
-                      placeItems: "center",
-                      marginTop: 10,
+                      height: "200px",
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: 17,
                     }}
                   >
                     <img
                       src={NFTImage}
                       alt="not found"
-                      style={{ width: 254, height: 190 }}
+                      style={{
+                        // width: 254,
+                        // height: 190,
+                        width: 200,
+                        height: 190,
+                      }}
                     />
                   </Box>
+                  {/* new size and id */}
                   <Box
                     style={{
                       color: "white",
                       display: "flex",
                       flexDirection: "row",
                       justifyContent: "space-around",
+                      font: "normal normal normal 12px Poppins",
+                      fontSize: "14px",
                     }}
                   >
                     <Typography
                       style={{
                         textAlign: "left",
                         letterSpacing: "0px",
-                        font: "normal normal normal 17px/32px Poppins",
+                        // font: "normal normal normal 17px/32px Poppins",
                         color: theme === "dark" ? "#B4951D" : "#6C26B1",
                         opacity: 1,
                       }}
@@ -143,7 +162,7 @@ export default function Profile() {
                       style={{
                         textAlign: "left",
                         letterSpacing: "0px",
-                        font: "normal normal normal 17px/32px Poppins",
+                        // font: "normal normal normal 17px/32px Poppins",
                         color: theme === "dark" ? "#B4951D" : "#6C26B1",
                         opacity: 1,
                       }}
@@ -151,11 +170,15 @@ export default function Profile() {
                       ID: 152236
                     </Typography>
                   </Box>
+                  {/* new size and id */}
+
+                  {/* new other stuff */}
                   <Box
                     style={{
+                      // width: "100%",
                       display: "flex",
                       flexDirection: "column",
-                      marginLeft: 45,
+                      marginLeft: 28,
                       marginTop: 10,
                       color: theme === "dark" ? "white" : "black",
                     }}
@@ -165,13 +188,14 @@ export default function Profile() {
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
+                        justifyContent: "flex-start",
                       }}
                     >
                       <Typography
                         style={{
                           minWidth: 70,
                           maxWidth: 70,
-                          font: "normal normal normal 14px/24px Poppins",
+                          font: "normal normal normal 12px/20px Poppins",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           fontWeight: "400",
@@ -182,7 +206,7 @@ export default function Profile() {
                       <Typography
                         style={{
                           textAlign: "left",
-                          font: "normal normal normal 10px/17px Poppins",
+                          font: "normal normal normal 10px/14px Poppins",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           opacity: 0.5,
@@ -203,10 +227,9 @@ export default function Profile() {
                         style={{
                           minWidth: 70,
                           maxWidth: 70,
-                          font: "normal normal normal 14px/24px Poppins",
+                          font: "normal normal normal 12px/20px Poppins",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
-                  
                         }}
                       >
                         Bio:
@@ -218,7 +241,7 @@ export default function Profile() {
                           overflow: "hidden",
                           whiteSpace: "nowrap",
                           textAlign: "left",
-                          font: "normal normal normal 10px/17px Poppins",
+                          font: "normal normal normal 10px/14px Poppins",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           opacity: 0.5,
@@ -231,13 +254,16 @@ export default function Profile() {
                       </Typography>
                     </Box>
                   </Box>
+                  {/* new other stuff */}
                 </Box>
               ))}
-
+              {/* ADD NFT box */}
               <AddNFTBox onClick={() => toggleCreateNFTModal()} theme={theme}>
                 {theme === "dark" ? <AddNFTIcon /> : <AddNFTIconLight />}
               </AddNFTBox>
+              {/* ADD NFT box */}
             </Box>
+            {/* social icons */}
             <Box
               style={{
                 display: "flex",
@@ -251,21 +277,22 @@ export default function Profile() {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  width: "400px",
+                  width: "350px",
                   justifyContent: "space-evenly",
+                  marginTop: "20px",
                 }}
               >
                 {theme === "dark" ? (
                   <>
-                    <DiscordGoldIcon />
-                    <InstagramIcon />
                     <TwitterGoldIcon />
+                    <InstagramIcon />
+                    <DiscordGoldIcon />
                   </>
                 ) : (
                   <>
-                    <DiscordLight />
-                    <InstagramIconLight />
                     <TwitterIconLight />
+                    <InstagramIconLight />
+                    <DiscordLight />
                   </>
                 )}
               </Box>
@@ -290,13 +317,14 @@ export default function Profile() {
                 Edit Socials
               </Button>
             </Box>
+            {/* social icons */}
             <GoldDivider theme={theme} />
           </ProfileWrapper>
         </Box>
-        <Box style={{ marginTop: "auto" }}>
+        <Box style={{ marginTop: "20px" }}>
           <GoldDivider theme={theme} />
         </Box>
-      </Box>
+      </BlackBackground>
     </div>
   );
 }

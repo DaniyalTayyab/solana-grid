@@ -13,8 +13,8 @@ function MintCounter(props) {
         padding: "10px 20px",
         // width: "215px",
         // height: "150px",
-        width: "170px",
-        height: "120px",
+        width: "190px",
+        height: "150px",
         marginRight: "7px",
         background:
           theme === "dark"
@@ -81,6 +81,7 @@ function MintCounter(props) {
             // height: "40px",
             width: "160px",
             height: "35px",
+            marginTop: "17px",
             background:
               "transparent linear-gradient(180deg, #FFFFFF 0%, #808080 100%) 0% 0% no-repeat padding-box",
             boxShadow: "0px 3px 15px #00000040",

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Box } from "@mui/material";
 
 export const ProfileWrapper = styled.div`
   display: flex;
@@ -10,15 +11,21 @@ export const ProfileWrapper = styled.div`
       : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box"};
   border-radius: 10px;
   width: 71%;
-  min-height: 520px;
-  margin-top: 15px;
+  /* min-height: 520px; */
+  min-height: 70vh;
+  margin-top: 40px;
   margin-bottom: 15px;
   padding-left: 67px;
   padding-right: 67px;
 
+  @media screen and (max-width: 1030px) {
+    height: 70vh;
+  }
+
   @media screen and (max-width: 768px) {
     width: 500px;
     padding-bottom: 20px;
+    overflow-y: auto;
   }
 
   @media screen and (max-width: 600px) {
@@ -29,10 +36,19 @@ export const ProfileWrapper = styled.div`
     width: 300px;
   }
 `;
+
+export const BlackBackground = styled(Box)`
+  height: 85.09vh;
+
+  @media screen and (max-width: 768px) {
+    height: 90vh;
+  }
+`;
+
 export const AddNFTBox = styled.div`
   cursor: pointer;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
   // width: 346px;
   // height: 437px;
   /* UI Properties */
@@ -41,6 +57,7 @@ export const AddNFTBox = styled.div`
   display: grid;
   place-items: center;
   border-radius: 10px;
+  margin-top: 15px;
   margin-right: 20px;
   margin-bottom: 15px;
   // padding-left: 10px

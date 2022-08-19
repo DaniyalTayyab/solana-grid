@@ -31,7 +31,14 @@ function SocialModal(props) {
       <Fade in={open} style={{ width: "500px", height: "500px" }}>
         <MintModalWrapper
           theme={theme}
-          style={{ height: "350px", justifyContent: "flex-start" }}
+          style={{
+            height: "350px",
+            justifyContent: "flex-start",
+            background:
+              theme === "dark"
+                ? "transparent linear-gradient(180deg, #132842 0%, #136687 48%, #042036 100%) 0% 0% no-repeat padding-box"
+                : "transparent linear-gradient(180deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
+          }}
         >
           <Typography
             style={{
@@ -40,6 +47,7 @@ function SocialModal(props) {
               right: "25px",
               cursor: "pointer",
               fontWeight: "bold",
+              color: "#fff",
             }}
             onClick={() => closeModal()}
           >
@@ -47,9 +55,14 @@ function SocialModal(props) {
           </Typography>
           <MintingInPrcessText
             theme={theme}
-            style={{ fontSize: "25px", marginBottom: "10px", marginTop: "0" }}
+            style={{
+              fontSize: "25px",
+              marginBottom: "10px",
+              marginTop: "0",
+              color: props.theme === "dark" ? "#E1C869" : "white",
+            }}
           >
-            Edit your social
+            Your Socials
           </MintingInPrcessText>
           <Box
             style={{
@@ -130,7 +143,7 @@ function SocialModal(props) {
           <ViewTransactionButton
             theme={theme}
             onClick={() => startMint()}
-            style={{ marginTop: "20px", padding: "15px" }}
+            style={{ marginTop: "20px", padding: "15px", marginBottom: "20px" }}
           >
             Save
           </ViewTransactionButton>

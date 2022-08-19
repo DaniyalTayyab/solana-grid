@@ -3,6 +3,48 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { BuyButton } from "../Footer/footer.styles";
 
+export const NFTModalWrapper = styled(Box)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 794;
+  height: 600;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 560px;
+  }
+`;
+
+export const NFTFormWrapper = styled(Box)`
+  margin-top: 50px;
+  display: flex;
+  height: 357px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+`;
+
+export const RightFormContainer = styled(Box)`
+  height: 100%;
+  width: 331px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+`;
+
 export const InputComponent = styled.input`
   width: 292px;
   min-height: 45px;
@@ -52,25 +94,25 @@ export const UploadButton = styled(Button)(`
  
 `);
 
-export const MintModalWrapper = styled(Box)((props) => ({
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "900px",
-  height: "500px",
-  background:
-    props.theme === "dark"
-      ? "transparent linear-gradient(110deg, #132842 0%, #136587 48%, #052137 100%) 0% 0% no-repeat padding-box"
-      : "transparent linear-gradient(120deg, #C2589B 0%, #5E47B3 100%) 0% 0% no-repeat padding-box",
-  boxShadow: "0px 10px 15px #00000029",
-  borderRadius: "15px",
-  opacity: 1,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-}));
+export const MintModalWrapper = styled(Box)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  box-shadow: 0px 10px 15px #00000029;
+  border-radius: 15px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 768px) {
+    width: 560px;
+  }
+`;
 
 export const ProgressText = styled("p")((props) => ({
   textAlign: "left",
@@ -91,26 +133,29 @@ export const ProgressTextCompleted = styled("p")((props) => ({
   marginTop: 2,
 }));
 
-export const MintingInPrcessText = styled(Typography)((props) => ({
-  textAlign: "left",
-  font: "normal normal bold 42px/55px Roboto",
-  letterSpacing: "0px",
-  color: props.theme === "dark" ? "#E1C869" : "white",
-  opacity: 1,
-  marginTop: 90,
-}));
+export const MintingInPrcessText = styled(Typography)`
+  text-align: left;
+  font: normal normal bold 42px/55px Roboto;
+  letter-spacing: 0px;
+  opacity: 1;
+  margin-top: 90px;
 
-export const GradientBackgroundBox = styled(Box)((props) => ({
-  width: "672px",
-  height: "21px",
-  background:
-    props.theme === "dark"
-      ? "transparent linear-gradient(90deg, #D3B651 0%, #F0D87B 34%, #C77131 63%, #C77131 100%) 0% 0% no-repeat padding-box"
-      : " transparent linear-gradient(90deg, #ECCBE6 0%, #CB96C0 23%, #C2589B 63%, #5E47B3 100%) 0% 0% no-repeat padding-box",
-  borderRadius: "10px",
-  opacity: 1,
-  marginTop: 90,
-}));
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+`;
+
+export const GradientBackgroundBox = styled(Box)`
+  width: 672px;
+  height: 21px;
+  border-radius: 10px;
+  opacity: 1;
+  margin-top: 90px;
+
+  @media screen and (max-width: 768px) {
+    width: 530px;
+  }
+`;
 
 export const ProgressBarContainer = styled(Box)({
   display: "flex",
@@ -118,13 +163,13 @@ export const ProgressBarContainer = styled(Box)({
   alignItems: "center",
 });
 
-export const ViewTransactionButton = styled(BuyButton)({
-  borderRadius: "56px",
-  marginTop: "auto",
-  marginBottom: 50,
-  boxShadow: "0px 31px 19px #00000045",
-  padding: "25px 20px",
-});
+export const ViewTransactionButton = styled(BuyButton)`
+  border-radius: 56px;
+  margin-top: 50px;
+  margin-bottom: 50;
+  box-shadow: 0px 31px 19px #00000045;
+  padding: 25px 20px;
+`;
 
 export const DoneButton = styled(Button)(`
   width: 200px;
@@ -145,4 +190,16 @@ color:white;
 
 export const StyledInput = styled.input`
   height: 20px;
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  display: ${(props) => (props.open ? "block" : "none")};
 `;

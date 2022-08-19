@@ -24,7 +24,6 @@ export default function Home() {
 
   const handleHover = (event) => {
     setPopup(event.currentTarget);
-
   };
   const closePopup = () => setPopup(false);
   useEffect(() => {
@@ -41,7 +40,12 @@ export default function Home() {
         sidePanel={sidePanel}
         boxSize={boxSize}
       />
-      <Popup popup={popup} theme={theme} closePopup={() => closePopup()} boxSize={boxSize} />
+      <Popup
+        popup={popup}
+        theme={theme}
+        closePopup={() => closePopup()}
+        boxSize={boxSize}
+      />
       <Box>
         <Header />
       </Box>
@@ -54,8 +58,8 @@ export default function Home() {
             overflow: "scroll",
             border:
               theme === "dark" ? "1px solid #F9ECB8" : "1px solid #5E47B3",
-            marginTop: 60,
-            marginBottom: 60,
+            marginTop: 176,
+            marginBottom: 126,
           }}
         >
           {" "}
@@ -71,7 +75,6 @@ export default function Home() {
                 index={index}
                 toggleSideDrawer={toggleSideDrawer}
                 handleHover={handleHover}
-               
               />
             ))}
           </TileCanvas>
