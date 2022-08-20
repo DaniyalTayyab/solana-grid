@@ -15,9 +15,12 @@ export const NFTModalWrapper = styled(Box)`
   border-radius: 10px;
   opacity: 1;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (max-width: 500px) {
-    width: 350px;
+    width: 370px;
   }
 `;
 
@@ -28,6 +31,13 @@ export const NFTFormWrapper = styled(Box)`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 350px;
+    flex-direction: column;
+    align-items: center;
     overflow-y: auto;
   }
 `;
@@ -43,6 +53,7 @@ export const RightFormContainer = styled(Box)`
     width: 100%;
     height: auto;
     margin-top: 20px;
+    margin-left: 20px;
   }
 `;
 
@@ -61,37 +72,8 @@ export const LeftFormContainer = styled(Box)`
   }
 `;
 
-export const InputComponent = styled.input`
-  width: 292px;
-  min-height: 45px;
-  border: 2px solid #89b0c0;
-  border-radius: 10px;
-  opacity: 1;
-  outline: 0;
-  background: transparent;
-  text-align: left;
-  font: normal normal normal 18px/24px Poppins;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 0.5;
-  text-indent: 10px;
-`;
 
-export const BioInputComponent = styled.input`
-  width: 292px;
-  min-height: 200px;
-  border: 2px solid #89b0c0;
-  border-radius: 10px;
-  opacity: 1;
-  outline: 0;
-  background: transparent;
-  text-align: left;
-  font: normal normal normal 18px/24px Poppins;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 0.5;
-  text-indent: 10px;
-`;
+
 export const UploadButton = styled(Button)(`
   background:${(props) =>
     props.theme === "dark"
@@ -117,6 +99,7 @@ export const MintModalWrapper = styled(Box)`
   transform: translate(-50%, -50%);
   width: 900px;
   height: 500px;
+
   box-shadow: 0px 10px 15px #00000029;
   border-radius: 15px;
   opacity: 1;
@@ -125,9 +108,31 @@ export const MintModalWrapper = styled(Box)`
   align-items: center;
   justify-content: flex-start;
 
-  @media (max-width: 500px) {
+  @media screen and (max-width: 500px) {
+    width: 350px;
+    height: 327px;
+  }
+`;
+
+export const SocialModalWrapper = styled(Box)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 350px;
+
+  box-shadow: 0px 10px 15px #00000029;
+  border-radius: 15px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 500px) {
     width: 300px;
-    height: 100px;
+    height: 327px;
   }
 `;
 
@@ -163,6 +168,7 @@ export const MintingInPrcessText = styled(Typography)`
 
   @media (max-width: 500px) {
     font-size: 20px;
+    margin-top: 20px;
   }
 `;
 
@@ -175,6 +181,7 @@ export const GradientBackgroundBox = styled(Box)`
 
   @media screen and (max-width: 768px) {
     width: 530px;
+    margin-top: 78px;
   }
 
   @media (max-width: 500px) {
@@ -200,7 +207,25 @@ export const ViewTransactionButton = styled(BuyButton)`
     font-size: 10px;
     font-weight: 700;
     padding: 0 10px;
-    margin-top: 30x;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+`;
+
+export const SaveButton = styled(BuyButton)`
+  border-radius: 56px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 31px 19px #00000045;
+  padding: 8px 0px;
+
+  @media (max-width: 500px) {
+    width: 150px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 0px;
+    margin-top: 20px;
+    margin-right: 0px;
   }
 `;
 
@@ -259,11 +284,51 @@ export const FormTitle = styled(Typography)`
   @media (max-width: 500px) {
     font-size: 13px;
     width: 30px;
+    margin-left: 5px;
   }
 `;
 
 export const FormInput = styled(InputUnstyled)`
+
+`;
+
+export const BioInputComponent = styled.input`
+  width: 292px;
+  min-height: 200px;
+  border: 2px solid #89b0c0;
+  border-radius: 10px;
+  opacity: 1;
+  outline: 0;
+  background: transparent;
+  text-align: left;
+  font: normal normal normal 18px/24px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.5;
+  text-indent: 10px;
+
   @media (max-width: 500px) {
-    width: 1px;
+    width: 240px;
+  }
+`;
+
+
+export const InputComponent = styled.input`
+  width: 292px;
+  min-height: 45px;
+  border: 2px solid #89b0c0;
+  border-radius: 10px;
+  opacity: 1;
+  outline: 0;
+  background: transparent;
+  text-align: left;
+  font: normal normal normal 18px/24px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.5;
+  text-indent: 10px;
+
+  @media (max-width: 500px) {
+    width: 240px;
   }
 `;

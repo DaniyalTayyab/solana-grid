@@ -2,9 +2,10 @@ import { Fade, Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import {
   MintingInPrcessText,
-  MintModalWrapper,
-  ViewTransactionButton,
+  SocialModalWrapper,
+
   StyledInput,
+  SaveButton,
 } from "./modal.styles";
 import axios from "axios";
 import TwitterGoldIcon from "../../assets/svg-icons/TwitterGoldIcon";
@@ -28,11 +29,11 @@ function SocialModal(props) {
       closeAfterTransition
       disableAutoFocus
     >
-      <Fade in={open} style={{ width: "500px", height: "500px" }}>
-        <MintModalWrapper
+      <Fade in={open} >
+        <SocialModalWrapper
           theme={theme}
           style={{
-            height: "350px",
+            // height: "350px",
             justifyContent: "flex-start",
             background:
               theme === "dark"
@@ -140,14 +141,14 @@ function SocialModal(props) {
               <StyledInput type="text" />
             </Box>
           </Box>
-          <ViewTransactionButton
+          <SaveButton
             theme={theme}
             onClick={() => startMint()}
-            style={{ marginTop: "20px", padding: "15px", marginBottom: "20px" }}
+            // style={{ marginTop: "20px", padding: "15px", marginBottom: "20px" }}
           >
             Save
-          </ViewTransactionButton>
-        </MintModalWrapper>
+          </SaveButton>
+        </SocialModalWrapper>
       </Fade>
     </Modal>
   );
