@@ -43,6 +43,7 @@ function NftModal(props) {
       onClose={() => closeModal()}
       closeAfterTransition
       disableAutoFocus
+      style={{ position: "relateive" }}
     >
       <Fade in={open}>
         <NFTModalWrapper style={style}>
