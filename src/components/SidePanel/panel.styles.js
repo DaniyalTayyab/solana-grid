@@ -49,6 +49,10 @@ export const NFTImage = styled.div`
   background-image: url(${(props) => props.img});
   background-size: cover;
   position: relative;
+
+  @media (max-width: 500px) {
+    width: 350px;
+  }
 `;
 
 export const NFTIdText = styled(Typography)`
