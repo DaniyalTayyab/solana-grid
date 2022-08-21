@@ -20,7 +20,7 @@ import {
 
 export default function SidePanel(props) {
   const { toggleDrawer, sidePanel, theme, boxSize } = props;
-  
+
   return (
     <Drawer anchor="right" open={sidePanel} onClose={() => toggleDrawer()}>
       <SidePanelWrapper
@@ -44,7 +44,21 @@ export default function SidePanel(props) {
             alignItems: "center",
           }}
         >
-          <NFTImage img={boxSize === "small" ? NFTSmall : boxSize === "medium" ? NFTMedium : boxSize === "large" ? NFTLarge : boxSize === "ultra" ? NFTUltra : boxSize === "mega" ? NFTMega : NFTSmall } />
+          <NFTImage
+            img={
+              boxSize === "small"
+                ? NFTSmall
+                : boxSize === "medium"
+                ? NFTMedium
+                : boxSize === "large"
+                ? NFTLarge
+                : boxSize === "ultra"
+                ? NFTUltra
+                : boxSize === "mega"
+                ? NFTMega
+                : NFTSmall
+            }
+          />
         </Box>
         <GoldDivider height="3px" />
         <Box
@@ -57,10 +71,7 @@ export default function SidePanel(props) {
             justifyContent: "center",
           }}
         >
-          <NFTIdText
-          >
-            NFT ID:
-          </NFTIdText>
+          <NFTIdText>NFT ID:</NFTIdText>
           <Typography
             style={{
               font: "normal normal normal 22px/24px Poppins",

@@ -9,8 +9,8 @@ export const NFTModalWrapper = styled(Box)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 794;
-  height: 600;
+  width: 794px;
+  height: 600px;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
   opacity: 1;
@@ -23,6 +23,11 @@ export const NFTModalWrapper = styled(Box)`
     width: 370px;
     margin-top: 60px;
   }
+`;
+
+export const Image = styled.image`
+  width: 794px;
+  height: 600px;
 `;
 
 export const NFTFormWrapper = styled(Box)`
