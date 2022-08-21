@@ -21,6 +21,7 @@ export const NFTModalWrapper = styled(Box)`
 
   @media screen and (max-width: 500px) {
     width: 370px;
+    margin-top: 50px;
   }
 `;
 
@@ -71,8 +72,6 @@ export const LeftFormContainer = styled(Box)`
     padding-left: 0px;
   }
 `;
-
-
 
 export const UploadButton = styled(Button)(`
   background:${(props) =>
@@ -288,9 +287,7 @@ export const FormTitle = styled(Typography)`
   }
 `;
 
-export const FormInput = styled(InputUnstyled)`
-
-`;
+export const FormInput = styled(InputUnstyled)``;
 
 export const BioInputComponent = styled.input`
   width: 292px;
@@ -311,7 +308,6 @@ export const BioInputComponent = styled.input`
     width: 240px;
   }
 `;
-
 
 export const InputComponent = styled.input`
   width: 292px;
