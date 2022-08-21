@@ -50,7 +50,19 @@ export default function Popup(props) {
         >
           <img
             alt="not found"
-            src={boxSize === "small" ? NFTSmall : boxSize === "medium" ? NFTMedium : boxSize === "large" ? NFTLarge : boxSize === "ultra" ? NFTUltra : boxSize === "mega" ? NFTMega : NFTSmall }
+            src={
+              boxSize === "small"
+                ? NFTSmall
+                : boxSize === "medium"
+                ? NFTMedium
+                : boxSize === "large"
+                ? NFTLarge
+                : boxSize === "ultra"
+                ? NFTUltra
+                : boxSize === "mega"
+                ? NFTMega
+                : NFTSmall
+            }
             style={{
               width: "184px",
               height: "184px",
@@ -106,13 +118,15 @@ export default function Popup(props) {
           }}
         >
           <DescriptionWrapper>
-            <MainText style={{ fontSize: "14px" }}>Link:</MainText>
+            <MainText style={{ fontSize: "14px", marginRight: "5px" }}>
+              Link:
+            </MainText>
             <SecondaryText style={{ fontSize: "10px" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             </SecondaryText>
           </DescriptionWrapper>
           <DescriptionWrapper>
-            <MainText style={{ fontSize: "14px" }}>Description:</MainText>
+            <MainText style={{ fontSize: "11px" }}>Description:</MainText>
             <SecondaryText style={{ fontSize: "10px" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor ut labore.

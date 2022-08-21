@@ -7,8 +7,8 @@ export const SidePanelWrapper = styled(Box)`
   boxshadow: 0px 3px 6px #00000029;
 
   @media screen and (max-width: 768px) {
-    /* width: 393px; */
-    width: 420px;
+    width: 400px;
+    /* width: 420px; */
   }
 `;
 
@@ -51,8 +51,8 @@ export const NFTImage = styled.div`
   position: relative;
 
   @media (max-width: 500px) {
-    width: 420px;
-    margin-right: 5px;
+    width: 390px;
+    /* margin-right: 5px; */
   }
 `;
 
