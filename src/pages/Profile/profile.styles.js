@@ -117,11 +117,14 @@ export const AddNFTBox = styled.div`
     margin-top: 20px;
     width: 280px;
     height: 380px;
+    margin-left: 20px;
   }
 
   @media (max-width: 500px) {
-    width: 280px;
+    width: 380px;
     height: 380px;
+    padding: 0 77px;
+    margin-left: 20px;
   }
 `;
 

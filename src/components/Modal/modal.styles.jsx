@@ -93,6 +93,9 @@ export const UploadButton = styled(Button)(`
   width: 185px;
   height: 38px;
 
+  @media (max-width: 500px) {
+    margin-bottom: 10px;
+  }
  
 `);
 
