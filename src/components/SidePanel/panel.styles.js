@@ -7,7 +7,8 @@ export const SidePanelWrapper = styled(Box)`
   boxshadow: 0px 3px 6px #00000029;
 
   @media screen and (max-width: 768px) {
-    width: 440px;
+    /* width: 440px; */
+    width: 393px;
   }
 `;
 

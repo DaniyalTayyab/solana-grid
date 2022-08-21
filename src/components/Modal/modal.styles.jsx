@@ -21,7 +21,7 @@ export const NFTModalWrapper = styled(Box)`
 
   @media screen and (max-width: 500px) {
     width: 370px;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 `;
 
