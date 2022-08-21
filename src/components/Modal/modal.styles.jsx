@@ -289,6 +289,7 @@ export const FormTitle = styled(Typography)`
     font-size: 13px;
     width: 30px;
     margin-left: 5px;
+    margin-right: 22px;
   }
 `;
 

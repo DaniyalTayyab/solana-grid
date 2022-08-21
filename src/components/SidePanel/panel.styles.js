@@ -51,7 +51,7 @@ export const NFTImage = styled.div`
   position: relative;
 
   @media (max-width: 500px) {
-    width: 390px;
+    width: 370px;
     /* margin-right: 5px; */
   }
 `;
