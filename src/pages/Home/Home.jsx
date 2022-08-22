@@ -25,6 +25,7 @@ export default function Home() {
   const handleHover = (event) => {
     setPopup(event.currentTarget);
   };
+
   const closePopup = () => setPopup(false);
   useEffect(() => {
     axios.get("dummyroute.solidity.com/test").then((res) => {
@@ -46,6 +47,7 @@ export default function Home() {
         closePopup={() => closePopup()}
         boxSize={boxSize}
       />
+
       <Box>
         <Header />
       </Box>
@@ -58,7 +60,7 @@ export default function Home() {
             overflow: "scroll",
             border:
               theme === "dark" ? "1px solid #F9ECB8" : "1px solid #5E47B3",
-            marginTop: 176,
+            marginTop: 76,
             marginBottom: 46,
           }}
         >

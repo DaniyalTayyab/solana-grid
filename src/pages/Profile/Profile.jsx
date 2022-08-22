@@ -9,6 +9,12 @@ import {
   AddNFTCardWrpper,
   SocialWrapper,
   EditSocialBtn,
+  ProfileBottomDividerBox,
+  WhatDoYouOwn,
+  NFTCardImage,
+  IDAndSizeTextWrapper,
+  NFTCardImageWrapper,
+  NameBioWrapper,
 } from "./profile.styles";
 import NFTImage from "../../assets/nft-image.png";
 import { Button, Typography } from "@mui/material";
@@ -62,7 +68,7 @@ export default function Profile() {
       <Box>
         <Header profileScreen />
       </Box>
-      <GoldDivider theme={theme} style={{ marginTop: "126px" }} />
+      <GoldDivider theme={theme} />
 
       <BlackBackground
         style={{
@@ -83,26 +89,20 @@ export default function Profile() {
           <Overlay open={nftModal} />
           <Overlay open={socailModal} />
           <ProfileWrapper theme={theme}>
-            <Box
+            <WhatDoYouOwn
               style={{
-                display: "grid",
-                placeItems: "center",
-                textAlign: "left",
-                font: "normal normal bold 23px Roboto",
-                letterSpacing: "0px",
                 color: theme === "dark" ? "#E1C869" : "white",
-                marginTop: "20px",
               }}
             >
               What do you own?
-            </Box>
+            </WhatDoYouOwn>
             <Box
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexWrap: "wrap",
-                marginTop: "15px",
+                marginTop: "-15px",
               }}
             >
               {dummyArr.map((obj, index) => (
@@ -115,43 +115,26 @@ export default function Profile() {
                         : "white",
                   }}
                 >
-                  <Box
-                    style={{
-                      width: "100%",
-                      height: "200px",
-                      display: "flex",
-                      justifyContent: "center",
-                      marginTop: 17,
-                    }}
-                  >
-                    <img
-                      src={NFTImage}
-                      alt="not found"
-                      style={{
-                        // width: 254,
-                        // height: 190,
-                        width: 200,
-                        height: 190,
-                      }}
-                    />
-                  </Box>
+                  <NFTCardImageWrapper>
+                    <NFTCardImage>
+                      <img
+                        src={NFTImage}
+                        alt="not found"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
+                    </NFTCardImage>
+                  </NFTCardImageWrapper>
                   {/* new size and id */}
-                  <Box
-                    style={{
-                      color: "white",
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-around",
-                      font: "normal normal normal 12px Poppins",
-                      fontSize: "14px",
-                    }}
-                  >
+                  <IDAndSizeTextWrapper>
                     <Typography
                       style={{
                         textAlign: "left",
                         letterSpacing: "0px",
-                        // font: "normal normal normal 17px/32px Poppins",
                         color: theme === "dark" ? "#B4951D" : "#6C26B1",
+                        fontSize: "inherit",
                         opacity: 1,
                       }}
                     >
@@ -161,27 +144,18 @@ export default function Profile() {
                       style={{
                         textAlign: "left",
                         letterSpacing: "0px",
-                        // font: "normal normal normal 17px/32px Poppins",
+                        fontSize: "inherit",
                         color: theme === "dark" ? "#B4951D" : "#6C26B1",
                         opacity: 1,
                       }}
                     >
                       ID: 152236
                     </Typography>
-                  </Box>
+                  </IDAndSizeTextWrapper>
                   {/* new size and id */}
 
                   {/* new other stuff */}
-                  <Box
-                    style={{
-                      // width: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      marginLeft: 28,
-                      marginTop: 10,
-                      color: theme === "dark" ? "white" : "black",
-                    }}
-                  >
+                  <NameBioWrapper>
                     <Box
                       style={{
                         display: "flex",
@@ -194,7 +168,8 @@ export default function Profile() {
                         style={{
                           minWidth: 70,
                           maxWidth: 70,
-                          font: "normal normal normal 12px/20px Poppins",
+                          // font: "normal normal normal 12px/20px Poppins",
+                          fontSize: "inherit",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           fontWeight: "400",
@@ -205,11 +180,12 @@ export default function Profile() {
                       <Typography
                         style={{
                           textAlign: "left",
-                          font: "normal normal normal 10px/14px Poppins",
+                          // font: "normal normal normal 10px/14px Poppins",
+                          fontSize: "inherit",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           opacity: 0.5,
-                          fontSize: "12px",
+                          // fontSize: "6px",
                         }}
                       >
                         Lorem Ipsum
@@ -226,7 +202,8 @@ export default function Profile() {
                         style={{
                           minWidth: 70,
                           maxWidth: 70,
-                          font: "normal normal normal 12px/20px Poppins",
+                          // font: "normal normal normal 12px/20px Poppins",
+                          fontSize: "inherit",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                         }}
@@ -240,11 +217,12 @@ export default function Profile() {
                           overflow: "hidden",
                           whiteSpace: "nowrap",
                           textAlign: "left",
-                          font: "normal normal normal 10px/14px Poppins",
+                          // font: "normal normal normal 10px/14px Poppins",
+                          fontSize: "inherit",
                           letterSpacing: "0px",
                           color: theme === "dark" ? "white" : "black",
                           opacity: 0.5,
-                          fontSize: "12px",
+                          // fontSize: "12px",
                         }}
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -252,7 +230,7 @@ export default function Profile() {
                         magna aliqua. Ut enim ad minim veniam.
                       </Typography>
                     </Box>
-                  </Box>
+                  </NameBioWrapper>
                   {/* new other stuff */}
                 </AddNFTCardWrpper>
               ))}
@@ -305,9 +283,9 @@ export default function Profile() {
             <GoldDivider theme={theme} />
           </ProfileWrapper>
         </Box>
-        <Box style={{ marginTop: "30px" }}>
+        <ProfileBottomDividerBox>
           <GoldDivider theme={theme} />
-        </Box>
+        </ProfileBottomDividerBox>
       </BlackBackground>
     </div>
   );

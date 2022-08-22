@@ -23,6 +23,10 @@ export const NFTModalWrapper = styled(Box)`
     width: 370px;
     margin-top: 60px;
   }
+
+  @media (max-height: 580px) {
+    margin-top: 15px;
+  }
 `;
 
 export const Image = styled.image`
@@ -141,6 +145,10 @@ export const SocialModalWrapper = styled(Box)`
     width: 300px;
     height: 327px;
   }
+
+  @media (max-height: 580px) {
+    margin-top: 25px;
+  }
 `;
 
 export const ProgressText = styled("p")((props) => ({
@@ -251,6 +259,10 @@ export const DoneButton = styled(Button)(`
 font: normal normal 600 16px/24px Poppins;
 letter-spacing: 0px;
 color:white;
+
+@media (max-height: 580px) {
+  margin-top: -20px;
+}
 `);
 
 export const StyledInput = styled.input`

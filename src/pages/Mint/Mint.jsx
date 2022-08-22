@@ -8,14 +8,19 @@ import MintModal from "../../components/Modal/mintingModal";
 import { GoldDivider } from "../Home/home.styles";
 import { MintProfileWrapper, TotalPrice } from "./Mint.styles";
 import MintCounter from "./MintCounter";
-import { CounterBox, MintWrapper, MaxTransaction } from "./Mint.styles";
+import {
+  CounterBox,
+  MintWrapper,
+  MaxTransaction,
+  TotalPriceLine,
+} from "./Mint.styles";
 import { Overlay } from "../../components/Modal/modal.styles";
 
 function Mint() {
   const [mintingModal, setMintingModal] = useState(false);
   const theme = useSelector((state) => state.theme.value);
   return (
-    <Box style={{ marginTop: "126px" }}>
+    <Box>
       <MintModal
         theme={theme}
         open={mintingModal}
@@ -59,21 +64,15 @@ function Mint() {
             </CounterBox>
             <TotalPrice>
               Total Price:
-              <div
-                style={{
-                  width: "200px",
-                  borderBottom: "1px solid #d7b179",
-                  marginLeft: "15px",
-                }}
-              ></div>
+              <TotalPriceLine></TotalPriceLine>
             </TotalPrice>
             <GoldDivider
               height="4px"
               theme={theme}
-              style={{ marginTop: "20px" }}
+              style={{ marginTop: "3px" }}
             />
             <MintButton
-              style={{ borderRadius: "56px", marginTop: "25px" }}
+              style={{ borderRadius: "56px" }}
               onClick={() => setMintingModal(true)}
               theme={theme}
             >

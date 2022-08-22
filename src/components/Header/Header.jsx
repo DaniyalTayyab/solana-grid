@@ -25,43 +25,40 @@ export default function Header(props) {
   const dispatch = useDispatch();
   const { profileScreen } = props;
   return (
-    <FixedHeader>
-      <HeaderWrapper profileScreen={profileScreen} theme={theme}>
-        <Logo profileScreen={profileScreen}>
-          {theme === "dark" ? <RichLogo /> : <RichLogoLight />}
-        </Logo>
-        {!profileScreen && (
-          <RightItems>
-            <ProfileIcon to="/profile">
-              {theme === "dark" ? <UserIcon /> : <ProfileIconLight />}
-            </ProfileIcon>
-            <Link to="/mint">
-              <DisconnectButton theme={theme}>
-                {" "}
-                Connect Wallet{" "}
-              </DisconnectButton>
-            </Link>
-            <div
-              onClick={() => dispatch(changeTheme())}
-              style={{
-                cursor: "pointer",
-                width: 40,
-                height: 40,
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />}
-            </div>
-          </RightItems>
-        )}
-        {/* {profileScreen && <AccountText theme={theme}>My Account</AccountText>} */}
-        {profileScreen && (
-          <ThemeIconWrapper onClick={() => dispatch(changeTheme())}>
+    // <FixedHeader>
+    <HeaderWrapper profileScreen={profileScreen} theme={theme}>
+      <Logo profileScreen={profileScreen}>
+        {theme === "dark" ? <RichLogo /> : <RichLogoLight />}
+      </Logo>
+      {!profileScreen && (
+        <RightItems>
+          <ProfileIcon to="/profile">
+            {theme === "dark" ? <UserIcon /> : <ProfileIconLight />}
+          </ProfileIcon>
+          <Link to="/mint">
+            <DisconnectButton theme={theme}> Connect Wallet </DisconnectButton>
+          </Link>
+          <div
+            onClick={() => dispatch(changeTheme())}
+            style={{
+              cursor: "pointer",
+              width: 40,
+              height: 40,
+              display: "grid",
+              placeItems: "center",
+            }}
+          >
             {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />}
-          </ThemeIconWrapper>
-        )}
-      </HeaderWrapper>
-    </FixedHeader>
+          </div>
+        </RightItems>
+      )}
+      {/* {profileScreen && <AccountText theme={theme}>My Account</AccountText>} */}
+      {profileScreen && (
+        <ThemeIconWrapper onClick={() => dispatch(changeTheme())}>
+          {theme === "dark" ? <ThemeIcon /> : <ThemeIconLight />}
+        </ThemeIconWrapper>
+      )}
+    </HeaderWrapper>
+    //</FixedHeader>
   );
 }

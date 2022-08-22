@@ -33,6 +33,16 @@ export const CounterBox = styled.div`
     grid-row-gap: 60px;
   }
 
+  @media (max-height: 580px) {
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: repeat(2, 100px);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    height: 200px;
+    margin-left: 45px;
+    margin-top: -10px;
+  }
+
   @media (max-width: 500px) {
     grid-row-gap: 20px;
   }
@@ -44,7 +54,7 @@ export const MintWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   /* height: 540px; */
-  min-height: 540px;
+  min-height: 340px;
 
   @media screen and (max-width: 1280px) {
     height: auto;
@@ -56,6 +66,10 @@ export const MintWrapper = styled.div`
 
   @media screen and (max-height: 882px) {
     min-height: 540px;
+  }
+
+  @media screen and (max-height: 580px) {
+    min-height: 250px;
   }
 `;
 
@@ -96,6 +110,14 @@ export const MintProfileWrapper = styled.div`
     padding-bottom: 10px;
   }
 
+  @media screen and (max-height: 580px) {
+    width: 51%;
+    min-height: 57.68vh;
+    margin-top: 20px;
+    margin-bottom: 11px;
+    padding-bottom: 10px;
+  }
+
   @media screen and (max-width: 768px) {
     width: 500px;
     padding-bottom: 20px;
@@ -114,8 +136,13 @@ export const MintProfileWrapper = styled.div`
 export const MaxTransaction = styled.div`
   font-size: 24px;
   font-weight: bold;
+
   @media screen and (max-width: 768px) {
     text-align: center;
+  }
+
+  @media screen and (max-height: 580px) {
+    font-size: 13px;
   }
 `;
 
@@ -139,10 +166,27 @@ export const TotalPrice = styled.div`
     margin-top: 80px;
   }
 
+  @media (max-height: 580px) {
+    margin-top: 1px;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
   @media (max-width: 500px) {
     align-items: center;
     line-height: 25px;
     margin-top: 50px;
+    /* margin-bottom: -10px; */
+  }
+`;
+
+export const TotalPriceLine = styled.div`
+  width: 200px;
+  border-bottom: 1px solid #d7b179;
+  margin-left: 15px;
+
+  @media (max-height: 580px) {
+    width: 100px;
   }
 `;
 
@@ -171,7 +215,14 @@ export const MintButton = styled(Button)`
   }
 
   @media screen and (max-height: 882px) {
-    margin-top: -10px;
+    /* margin-top: -10px; */
+  }
+
+  @media (max-height: 580px) {
+    width: 110px;
+    height: 22px;
+    font-size: 10px;
+    margin-top: 10px;
   }
 
   @media screen and (max-width: 768px) {

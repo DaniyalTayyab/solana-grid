@@ -35,6 +35,11 @@ export const ProfileWrapper = styled.div`
     min-heigh: 72.5vh;
   }
 
+  @media (max-height: 580px) {
+    min-height: 60vh;
+    width: 50%;
+  }
+
   @media screen and (max-width: 1030px) {
     height: 70vh;
     padding-bottom: 20px;
@@ -53,11 +58,20 @@ export const ProfileWrapper = styled.div`
 
   @media (max-width: 500px) {
     width: 230px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const ProfileBottomDividerBox = styled(Box)`
+  margin-top: 30px;
+
+  @media (max-width: 580px) {
+    margin-top: 0;
   }
 `;
 
 export const BlackBackground = styled(Box)`
-  height: 84.5vh;
+  /* height: 84.5vh; */
 
   @media all and (max-height: 1102px) {
     min-height: 88vh;
@@ -71,6 +85,12 @@ export const BlackBackground = styled(Box)`
 
   @media all and (max-height: 882px) {
     min-height: 82vh;
+    padding-bottom: 26px;
+  }
+
+  @media all and (max-height: 580px) {
+    min-height: 77.2vh;
+    padding-bottom: 0;
   }
 
   @media screen and (max-width: 768px) {
@@ -113,6 +133,11 @@ export const AddNFTBox = styled.div`
     height: 350px;
   }
 
+  @media (max-height: 580px) {
+    height: 150px;
+    width: 120px;
+  }
+
   @media screen and (max-width: 768px) {
     margin-top: 20px;
     width: 280px;
@@ -151,6 +176,12 @@ export const AddNFTCardWrpper = styled(Box)`
   @media (max-height: 882px) {
     width: 250px;
     height: 350px;
+  }
+
+  @media (max-height: 580px) {
+    border-radius: 5px;
+    height: 150px;
+    width: 120px;
   }
 
   @media (max-width: 500px) {
@@ -202,5 +233,76 @@ export const EditSocialBtn = styled(Button)`
 
   @media (max-height: 882px) {
     margin-top: 10px;
+  }
+
+  @media (max-height: 580px) {
+    width: 107px;
+    height: 26px;
+    font-size: 12px;
+  }
+`;
+
+export const WhatDoYouOwn = styled(Box)`
+  display: grid;
+  place-items: center;
+  text-align: left;
+  font: normal normal bold 23px Roboto;
+  letter-spacing: 0px;
+  margin-top: 20px;
+
+  @media (max-height: 580px) {
+    font-size: 13px;
+  }
+`;
+
+export const NFTCardImage = styled.div`
+  width: 80%;
+  height: 190px;
+  margin-top: 17px;
+
+  @media (max-height: 580px) {
+    height: 70px;
+    margin-top: 7px;
+  }
+`;
+
+export const NFTCardImageWrapper = styled(Box)`
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-height: 580px) {
+    height: 70px;
+  }
+`;
+
+export const IDAndSizeTextWrapper = styled(Box)`
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font: normal normal normal 12px Poppins;
+  /* font-size: 14px; */
+  margin-top: 12px;
+
+  @media (max-height: 580px) {
+    font-size: 8px;
+    margin-top: 12px;
+  }
+`;
+
+export const NameBioWrapper = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  margin-left: 28px;
+  margin-top: 10px;
+  color: ${(props) => (props.theme === "dark" ? "white" : "black")};
+  font: "normal normal normal 12px/20px Poppins";
+
+  @media (max-height: 580px) {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 8px;
   }
 `;
