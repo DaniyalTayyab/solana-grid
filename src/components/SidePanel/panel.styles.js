@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 
 export const SidePanelWrapper = styled(Box)`
-  margin-top: 126px;
   width: 577px;
   boxshadow: 0px 3px 6px #00000029;
 
