@@ -295,6 +295,8 @@ export const IDAndSizeTextWrapper = styled(Box)`
 export const NameBioWrapper = styled(Box)`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
   margin-left: 28px;
   margin-top: 10px;
   color: ${(props) => (props.theme === "dark" ? "white" : "black")};
@@ -304,5 +306,6 @@ export const NameBioWrapper = styled(Box)`
     margin-left: 10px;
     margin-top: 10px;
     font-size: 8px;
+    height: auto;
   }
 `;

@@ -23,3 +23,20 @@ export const CanvasWrapper = styled("div")((props) => ({
   display: "grid",
   placeItems: "center",
 }));
+
+export const CanvasInner = styled.div`
+  width: 95%;
+  /* height: 1122; */
+  height: 266px;
+  overflow: scroll;
+  margin-top: 65px;
+  margin-bottom: 46px;
+
+  @media (max-height: 882px) {
+    height: 570px;
+  }
+
+  @media (max-height: 580px) {
+    height: 266px;
+  }
+`;

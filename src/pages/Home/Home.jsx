@@ -7,7 +7,12 @@ import Popup from "../../components/Popup/Popup";
 import SidePanel from "../../components/SidePanel/SidePanel";
 import Tile from "../../components/Tile/Tile";
 import { tileData } from "../../utils/tileArray";
-import { CanvasWrapper, GoldDivider, TileCanvas } from "./home.styles";
+import {
+  CanvasWrapper,
+  GoldDivider,
+  TileCanvas,
+  CanvasInner,
+} from "./home.styles";
 import axios from "axios";
 
 export default function Home() {
@@ -53,15 +58,10 @@ export default function Home() {
       </Box>
 
       <CanvasWrapper theme={theme}>
-        <div
+        <CanvasInner
           style={{
-            width: "95%",
-            height: 1122,
-            overflow: "scroll",
             border:
               theme === "dark" ? "1px solid #F9ECB8" : "1px solid #5E47B3",
-            marginTop: 76,
-            marginBottom: 46,
           }}
         >
           {" "}
@@ -80,7 +80,7 @@ export default function Home() {
               />
             ))}
           </TileCanvas>
-        </div>
+        </CanvasInner>
         <GoldDivider theme={theme} />
         <Footer />
       </CanvasWrapper>
