@@ -9,6 +9,10 @@ export const SidePanelWrapper = styled(Box)`
     width: 400px;
     /* width: 420px; */
   }
+
+  @media screen and (max-width: 500) {
+    width: 300px;
+  }
 `;
 
 export const MainText = styled.span`
